@@ -2,6 +2,9 @@ package com.macomsy.macomsy.controllers;
 
 import com.macomsy.macomsy.dao.UsuarioDao;
 import com.macomsy.macomsy.models.Usuario;
+import com.macomsy.macomsy.utils.JwtUtil;
+import de.mkammerer.argon2.Argon2;
+import de.mkammerer.argon2.Argon2Factory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
@@ -12,6 +15,9 @@ import java.util.List;
 public class UsuarioController {
     @Autowired
     private UsuarioDao usuarioDao;
+
+    @Autowired
+    private JwtUtil jwtUtil;
     @RequestMapping(value = "api/usuario/{id}", method = RequestMethod.GET)
     public Usuario getUsuario (@PathVariable long id){
         Usuario usuario = new Usuario();
@@ -24,15 +30,28 @@ public class UsuarioController {
     }
 
     @RequestMapping(value = "api/usuarios", method = RequestMethod.GET)
-    public List<Usuario> getUsuario(){
+    public List<Usuario> getUsuario(@RequestHeader (value = "Authorization") String token){
+
+        String usuarioId = jwtUtil.getKey(token);
+        if (usuarioId == null){
+            return new ArrayList<>();
+        }
+
         return usuarioDao.getUsuario();
     }
 
 
     @RequestMapping(value = "api/usuarios", method = RequestMethod.POST)
     public void registrarUsuario(@RequestBody Usuario usuario){
+
+        Argon2 argon2 = Argon2Factory.create(Argon2Factory.Argon2Types.ARGON2id);
+        String hash = argon2.hash(1,1024,1,usuario.getPassword());
+        usuario.setPassword(hash);
+
         usuarioDao.registar(usuario);
     }
+
+
 
 
 

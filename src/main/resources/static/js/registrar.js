@@ -18,29 +18,23 @@ async function registrarUsuarios() {
         return;
     }
 
-    try{
-        const request = await fetch('api/usuarios', {
-            method: 'POST',
-            headers: {
-                'Accept': 'application/json',
-                'Content-Type': 'application/json'
-            },
-            body: JSON.stringify(datos)
-        });
-        //const usuarios = await request.json();
 
-        if (request.ok) {
-            // Mostrar mensaje de éxito
-            alert("Usuario registrado exitosamente");
-            location.reload()
-        } else {
-            // Mostrar mensaje de error con la respuesta del servidor
-            alert(`Error al registrar usuario: ${response.error}`);
-        }
-    } catch (error) {
-        // Mensaje error de la API
-        console.error(error);
-        alert("Ha ocurrido un error inesperado. Intente nuevamente más tarde.");
+    const request = await fetch('api/usuarios', {
+        method: 'POST',
+        headers: {
+            'Accept': 'application/json',
+            'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(datos)
+    });
+    //const usuarios = await request.json();
+
+    if (request.ok) {
+        // Mostrar mensaje de éxito
+        alert("Usuario registrado exitosamente");
+        location.reload()
+    } else {
+        // Mostrar mensaje de error con la respuesta del servidor
+        alert(`Error al registrar usuario: ${response.error}`);
     }
-
 }
