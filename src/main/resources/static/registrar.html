@@ -20,9 +20,39 @@
     <!-- Custom styles for this template-->
     <link href="css/sb-admin-2.min.css" rel="stylesheet">
 
+    <!-- Styles for registration page -->
+    <style>
+        .bg-gradient-primary-login {
+            background-color: #27374D;
+            background-image: linear-gradient(180deg, #DDE6ED 10%, #526D82 100%);
+            color: #27374D; /* Color de texto */
+        }
+
+        .btn-primary {
+            background-color: #526D82; /* Color de fondo del botón */
+            border-color: #526D82; /* Color del borde del botón */
+        }
+
+        .btn-primary:hover {
+            background-color: #9DB2BF; /* Color de fondo del botón al pasar el mouse */
+            border-color: #9DB2BF; /* Color del borde del botón al pasar el mouse */
+        }
+
+        .form-control {
+            background-color: #DDE6ED; /* Color de fondo del campo de entrada */
+            color: #DDE6ED; /* Color de texto del campo de entrada */
+        }
+
+        /* Estilos para el título "Registrar" */
+        .registrar-title {
+            font-size: 24px; /* Tamaño del texto */
+            font-weight: bold; /* Negrita */
+            margin-bottom: 20px; /* Espacio inferior */
+        }
+    </style>
 </head>
 
-<body class="bg-gradient-primary">
+<body class="bg-gradient-primary-login">
 
     <div class="container">
 
@@ -30,11 +60,11 @@
             <div class="card-body p-0">
                 <!-- Nested Row within Card Body -->
                 <div class="row">
-                    <div class="col-lg-5 d-none d-lg-block bg-register-image"></div>
-                    <div class="col-lg-7">
+                    <div class="col-lg-12">
                         <div class="p-5">
                             <div class="text-center">
-                                <h1 class="h4 text-gray-900 mb-4">Registrar!</h1>
+                                <!-- Título con los nuevos estilos -->
+                                <h1 class="h4 mb-4 registrar-title">Registro</h1>
                             </div>
                             <form class="user">
                                 <div class="form-group row">
@@ -88,7 +118,6 @@
 
     <!-- Inicio prgramacionJavaScript-->
     <script src="js/registrar.js"></script>
-
 
 </body>
 
