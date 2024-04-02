@@ -13,14 +13,17 @@ async function cargarUsuarios() {
   });
   const usuarios = await request.json();
 
+  // Invertir el orden de los usuarios
+  const usuariosInvertidos = usuarios.reverse();
+
   let listadoHtml = '';
 
-  for(let usuario of usuarios){
+  for(let usuario of usuariosInvertidos){
 
     let usuarioHtml = '<tr>\n' +
                                                     '<td>'+usuario.id+'</td>\n' +
                                                     '<td>'+usuario.nombre+' '+usuario.apellido+'</td>\n' +
-                                                    '<td>'+usuario.mail+'</td>\n' +
+                                                    '<td>'+usuario.email+'</td>\n' +
                                                     '<td>'+usuario.telefono+'</td>\n' +
                                                     '<td>\n' +
                                                         '<a href="#" onclick="eliminarUsuario('+usuario.id+')" class="btn btn-danger btn-circle btn-sm">\n' +
