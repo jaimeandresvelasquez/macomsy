@@ -3,8 +3,8 @@
 
 <head>
     <meta charset="UTF-8">
-    <title>Inicio</title>
-    <link rel="stylesheet" href="static/css/inicio.css">
+    <title>Instalaciones</title>
+    <link rel="stylesheet" href="static/css/instalaciones.css">
     <script src="https://kit.fontawesome.com/ab43f04f6c.js" crossorigin="anonymous"></script>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
@@ -23,11 +23,9 @@
         <div class="profile-options">
             <ul>
                 <li><a href="#">Configuración</a></li>
-                <li><a href="#" id="logout">Cerrar sesión</a></li>
+                <li><a href="#">Cerrar sesión</a></li>
             </ul>
         </div>
-        
-            
     </header>
 
     <!-- Sidebar -->
@@ -81,42 +79,42 @@
     </div>
     <!-- Fin del sidebar -->
 
-    <!-- Contenedor de las tarjetas con margen superior -->
-    <div class="tarjetas__container" style="margin-top: 100px;">
-        <div class="tarjeta">
-            <div class="titulo">
-                <h3 class="numero-caso">[CASO: CMMS-2024-001]</h3>
-            </div>
-            <div class="contenido">
-                <i class="fa-solid fa-wrench icono" title="Mantenimiento"></i>
-                <p class="texto">Informe de mantenimiento programado para el sistema eléctrico del edificio principal.</p>
-                <p class="urgencia urgencia-media">Urgencia: Media</p>
-            </div>
+    <!-- Contenedor de la tarjeta grande -->
+    <div class="tarjeta-grande">
+        <div class="icono-casa">
+            <i class="fa-solid fa-home icono" title="Mantenimiento"></i>
+            <br>
+            <input type="file" id="imagen" name="imagen" accept="image/*">
         </div>
+        <div class="contenido">
+            <div class="campo">
+                <label for="estado">Estado:</label>
+                <input type="text" id="estado" name="estado">
+            </div>
+            <div class="campo">
+                <label for="criticidad">Criticidad:</label>
+                <input type="text" id="criticidad" name="criticidad">
+            </div>
+            <div class="campo">
+                <label for="familia">Familia:</label>
+                <input type="text" id="familia" name="familia">
+            </div>
+            <div class="campo direccion">
+                <label for="direccion">Dirección:</label>
+                <textarea id="direccion" name="direccion" rows="2"></textarea>
+            </div>
 
-        <div class="tarjeta">
-            <div class="titulo">
-                <h3 class="numero-caso">[CASO: CMMS-2024-002]</h3>
+            <div class="campo">
+                <label for="comentarios">Comentarios:</label>
+                <textarea id="comentarios" name="comentarios" placeholder="Comentarios adicionales"></textarea>
             </div>
-            <div class="contenido">
-                <i class="fa-solid fa-wrench icono" title="Mantenimiento"></i>
-                <p class="texto">Reporte de avería en el sistema de climatización del salón de clases A101.</p>
-                <p class="urgencia urgencia-alta">Urgencia: Alta</p>
-            </div>
-        </div>
-
-        <div class="tarjeta">
-            <div class="titulo">
-                <h3 class="numero-caso">[CASO: CMMS-2024-003]</h3>
-            </div>
-            <div class="contenido">
-                <i class="fa-solid fa-wrench icono" title="Mantenimiento"></i>
-                <p class="texto">Solicitud de mantenimiento preventivo para los equipos de laboratorio de química.</p>
-                <p class="urgencia urgencia-media">Urgencia: Media</p>
+            <div class="botones">
+                <button type="submit">Guardar</button>
             </div>
         </div>
     </div>
-    <!-- Fin de las tarjetas -->
+    
+    <!-- Fin de la tarjeta grande -->
 
     <script src="static/js/inicio.js"></script>
 

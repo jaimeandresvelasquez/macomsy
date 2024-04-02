@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
 
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -8,12 +8,12 @@
     font-family: 'Nunito', sans-serif;
 }
 
-body{
-    margin-left: 20px; /* Reduzca el margen izquierdo */
+body {
+    margin-left: 20px;
     transition: margin-left 300ms cubic-bezier(0.085, 0.135, 0.15, 0.86);
 }
 
-header{
+header {
     width: 100%;
     height: 80px;
     background: #27374D;
@@ -26,16 +26,16 @@ header{
 
 #title_header {
     color: #DDE6ED;
-    margin-left: 50px; /* Ajusta el margen izquierdo */
+    margin-left: 50px;
 }
 
-.show_title{
+.show_title {
     color: #DDE6ED;
     display: none;
 }
 
-.menu__side{
-    width: 60px; /* Reduce el ancho del menú lateral */
+.menu__side {
+    width: 60px;
     height: 100%;
     background: #27374D;
     position: fixed;
@@ -44,135 +44,147 @@ header{
     color: #DDE6ED;
     font-size: 18px;
     z-index: 300;
-    overflow: hidden; 
+    overflow: hidden;
     border-right: 20px solid #27374D;
     transition: all 300ms cubic-bezier(0.085, 0.135, 0.15, 0.86);
 }
 
-.name__page{
-    padding: 20px; /* Ajusta el espaciado */
-    margin-top: 0; /* Elimina el margen superior */
+.name__page {
+    padding: 20px;
+    margin-top: 0;
 }
 
-.name__page i{
-    width: 20px;    
+.name__page i {
+    width: 20px;
     margin-right: 20px;
 }
 
-.options__menu{
-    padding: 10px 20px; /* Ajusta el espaciado */
+.options__menu {
+    padding: 10px 20px;
     position: absolute;
-    top: 60px; /* Ajusta la posición vertical */
+    top: 60px;
 }
 
-.options__menu a{
+.options__menu a {
     color: #DDE6ED;
     cursor: default;
     display: block;
     position: relative;
-    transition: color 300ms;
 }
 
-.options__menu a:hover{
+.options__menu a:hover {
     color: #9DB2BF;
 }
 
-.options__menu .opcion{
+.options__menu .opcion {
     padding: 20px 0px;
     display: flex;
     align-items: center;
     position: relative;
 }
 
-.options__menu .opcion i{
+.options__menu .opcion i {
     width: 20px;
     margin-right: 20px;
     cursor: pointer;
 }
 
-.options__menu .opcion h4{
+.options__menu .opcion h4 {
     font-weight: 300;
     cursor: pointer;
 }
 
-a.selected{
+a.selected {
     color: #DDE6ED;
 }
 
-.body_move{
+.body_move {
     margin-left: 250px;
 }
 
-.menu__side__move{
+.menu__side__move {
     width: 250px;
 }
 
 @media screen and (max-width: 760px) {
-    .body_move{
+    .body_move {
         margin-left: 0px;
     }
-    .menu__side__move{
+
+    .menu__side__move {
         width: 80px;
         left: -80px;
     }
 }
 
-/* Ajuste de margen izquierdo para todas las tarjetas */
-.tarjetas__container {
+.tarjeta-grande {
     display: flex;
-    justify-content: center;
-    margin-left: 20px; /* Ajusta el margen izquierdo */
-}
-
-.tarjeta {
+    align-items: flex-start; /* Alinea los elementos en la parte superior */
     padding: 20px;
     border-radius: 8px;
     margin: 20px;
+    margin-top: 100px; /* Agregar margen superior */
     background-color: #f9f9f9;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    position: relative;
 }
 
-.titulo {
+.icono-casa {
+    width: 50%; /* Ocupa la mitad del ancho de la tarjeta */
     text-align: center;
+    margin-bottom: 20px; /* Agrega espacio debajo del icono de casa */
 }
 
-.numero-caso {
-    font-weight: bold;
-    margin-bottom: 5px;
+.icono-casa i {
+    font-size: 48px; /* Tamaño grande para el icono de casa */
 }
 
 .contenido {
-    display: flex;
-    align-items: center;
+    width: 50%; /* Ocupa la otra mitad del ancho de la tarjeta */
+    padding: 0 20px; /* Agrega un poco de espacio alrededor de los campos */
 }
 
-.icono {
-    margin-right: 20px;
-    font-size: 24px;
+.campo {
+    margin-bottom: 10px; /* Espacio entre cada campo */
+}
+/* Ajuste del tamaño de los campos horizontalmente */
+.campo input[type="text"],
+.campo textarea {
+    width: 100%; /* Ocupa todo el ancho disponible */
 }
 
-.texto p {
-    margin: 0;
+/* Reducción de la altura del campo de dirección */
+.campo.direccion textarea {
+    height: 50px; /* Cambia la altura según sea necesario */
 }
 
-.urgencia {
-    margin-left: auto;
-    font-weight: bold;
-    padding: 5px 10px;
+
+textarea {
+    height: 100px; /* Altura del campo de comentarios */
+    resize: vertical; /* Permitir el redimensionamiento vertical */
+}
+
+.botones {
+    width: 100%;
+    text-align: left; /* Centra el botón por defecto */
+    margin-top: 20px; /* Espacio entre los campos y el botón */
+}
+
+.botones button {
+    width: 150px; /* Ancho del botón */
+    padding: 10px; /* Espacio interno del botón */
+    border: none;
     border-radius: 5px;
+    background-color: #27374D; /* Color de fondo azul */
+    color: #fff;
+    cursor: pointer;
+    transition: background-color 0.3s;
 }
 
-.urgencia-media {
-    background-color: #ffc107;
-    color: #fff;
+.botones button:hover {
+    background-color: #1B2536; /* Cambio de color al pasar el ratón por encima */
 }
 
-.urgencia-alta {
-    background-color: #dc3545;
-    color: #fff;
-}    
-
-/* Estilo para el icono de perfil */
 .profile-icon {
     position: absolute;
     top: 20px;
