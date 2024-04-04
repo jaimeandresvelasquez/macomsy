@@ -8,8 +8,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="">
     <meta name="author" content="">
+    <link rel="stylesheet" href="css/inicio.css">
+    <script src="https://kit.fontawesome.com/ab43f04f6c.js" crossorigin="anonymous"></script>
 
-    <title>SB Admin 2 - Register</title>
+    <title>Talento Humano</title>
 
     <!-- Custom fonts for this template-->
     <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
@@ -39,8 +41,8 @@
         }
 
         .form-control {
-            background-color: #DDE6ED; /* Color de fondo del campo de entrada */
-            color: #DDE6ED; /* Color de texto del campo de entrada */
+            background-color: #ffff; /* Color de fondo del campo de entrada */
+            color: #27374D; /* Color de texto del campo de entrada */
         }
 
         /* Estilos para el título "Registrar" */
@@ -54,6 +56,78 @@
 
 <body class="bg-gradient-primary-login">
 
+    <header>
+        <span id="title_header" class="show_title">
+            <h1>MACOMSY</h1>
+        </span>
+        <!-- Icono de perfil -->
+        <div class="profile-icon">
+            
+            <i class="fas fa-user-circle"></i>
+            <span class="admin-text">Admin</span>
+        </div>
+        <!-- Menú de opciones de perfil -->
+        <div class="profile-options">
+            <ul>
+                <li><a href="#">Configuración</a></li>
+                <li><a href="loginMa.html" id="logout">Cerrar sesión</a></li>
+            </ul>
+        </div>
+        
+            
+    </header>
+
+    <!-- Sidebar -->
+    <div class="menu__side" id="menu_side">
+        <div class="name__page">
+            <i class="fa-solid fa-bars" id="btn_open"></i>
+            <h2></h2>
+        </div>
+
+        <div class="options__menu">
+            <a href="inicioMa.html" class="selected">
+                <div class="opcion">
+                    <i class="fa-solid fa-house" title="Inicio"></i>
+                    <h4>Inicio</h4>
+                </div>
+            </a>
+
+            <a href="instalaciones.html" class="selected">
+                <div class="opcion">
+                    <i class="fa-solid fa-building" title="Instalaciones"></i>
+                    <h4>Instalaciones</h4>
+                </div>
+            </a>
+
+            <a href="activos.html" class="selected">
+                <div class="opcion">
+                    <i class="fa-solid fa-laptop" title="Activos"></i>
+                    <h4>Activos</h4>
+                </div>
+            </a>
+
+            <a href="mantenimiento.html" class="selected">
+                <div class="opcion">
+                    <i class="fa-solid fa-wrench" title="Mantenimiento"></i>
+                    <h4>Mantenimiento</h4>
+                </div>
+            </a>
+            <a href="ordenes.html" class="selected">
+                <div class="opcion">
+                    <i class="fa-solid fa-list" title="Ordenes de trabajo"></i>
+                    <h4>Ordenes de trabajo</h4>
+                </div>
+            </a>
+            <a href="registrarMa.html" class="selected">
+                <div class="opcion">
+                    <i class="fa-solid fa-user-tie" title="Talento humano"></i>
+                    <h4>Talento humano</h4>
+                </div>
+            </a>
+        </div>
+    </div>
+    <!-- Fin del sidebar -->
+
     <div class="container">
 
         <div class="card o-hidden border-0 shadow-lg my-5">
@@ -64,7 +138,7 @@
                         <div class="p-5">
                             <div class="text-center">
                                 <!-- Título con los nuevos estilos -->
-                                <h1 class="h4 mb-4 registrar-title">Registro</h1>
+                                <h1 class="h4 mb-4 registrar-title">Talento Humano</h1>
                             </div>
                             <form class="user">
                                 <div class="form-group row">
@@ -157,6 +231,7 @@
     <script src="js/sb-admin-2.min.js"></script>
 
     <!-- Inicio prgramacionJavaScript-->
+    <script src="js/inicio.js"></script>
     <script src="js/usuarios.js"></script>
     <script src="js/registrar.js"></script>
 

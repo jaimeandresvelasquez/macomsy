@@ -15,7 +15,7 @@ body {
 
 header {
     width: 100%;
-    height: 80px;
+    height: 50px;
     background: #27374D;
     display: flex;
     align-items: center;
@@ -193,11 +193,11 @@ a.selected {
 /* Estilo para el icono de perfil */
 .profile-icon {
     position: absolute;
-    top: 20px;
-    right: 50px; /* Ajusta la posición horizontal del icono de perfil */
+    top: 8px;
+    right: 30px; /* Ajusta la posición horizontal del icono de perfil */
     color: #DDE6ED;
     cursor: pointer;
-    font-size: 24px; /* Tamaño del icono de perfil */
+    font-size: 26px; /* Tamaño del icono de perfil */
 }
 
 /* Estilo para las opciones del perfil */
