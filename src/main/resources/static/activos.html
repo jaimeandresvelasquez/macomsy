@@ -4,9 +4,16 @@
 <head>
     <meta charset="UTF-8">
     <title>Instalaciones</title>
-    <link rel="stylesheet" href="static/css/instalaciones.css">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+    rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="css/instalaciones.css">
     <script src="https://kit.fontawesome.com/ab43f04f6c.js" crossorigin="anonymous"></script>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+
 </head>
 
 <body id="body">
@@ -50,7 +57,7 @@
                 </div>
             </a>
 
-            <a href="activos.html" class="selected">
+            <a href="../activos.html" class="selected">
                 <div class="opcion">
                     <i class="fa-solid fa-laptop" title="Activos"></i>
                     <h4>Activos</h4>
@@ -82,41 +89,92 @@
     <!-- Contenedor de la tarjeta grande -->
     <div class="tarjeta-grande">
         <div class="icono-casa">
-            <i class="fa-solid fa-home icono" title="Mantenimiento"></i>
+            <i class="fa-solid fa-home icono" title="Activos"></i>
             <br>
             <input type="file" id="imagen" name="imagen" accept="image/*">
         </div>
         <div class="contenido">
             <div class="campo">
-                <label for="estado">Estado:</label>
-                <input type="text" id="estado" name="estado">
-            </div>
-            <div class="campo">
-                <label for="criticidad">Criticidad:</label>
-                <input type="text" id="criticidad" name="criticidad">
-            </div>
-            <div class="campo">
-                <label for="familia">Familia:</label>
-                <input type="text" id="familia" name="familia">
-            </div>
-            <div class="campo direccion">
-                <label for="direccion">Dirección:</label>
-                <textarea id="direccion" name="direccion" rows="2"></textarea>
+                <label for="nombre">Nombre:</label>
+                <input type="text" id="nombre" name="nombre">
             </div>
 
             <div class="campo">
-                <label for="comentarios">Comentarios:</label>
-                <textarea id="comentarios" name="comentarios" placeholder="Comentarios adicionales"></textarea>
+                <label for="estado">Estado:</label>
+                <select id="estado" name="estado">
+                    <option value="Operativo">Operativo</option>
+                    <option value="En mantenimiento">En mantenimiento</option>
+                    <option value="Fuera de servicio">Fuera de servicio</option>
+                    <option value="En desuso:">En desuso:</option>
+                </select>
             </div>
+
+            <div class="campo">
+                <label for="criticidad">Criticidad:</label>
+                <select id="criticidad" name="criticidad">
+                    <option value="critico">Crítico</option>
+                    <option value="alto">Alto</option>
+                    <option value="medio">Medio</option>
+                    <option value="bajo">Bajo</option>
+                </select>
+            </div>
+
+            <div class="campo">
+                <label for="fabricante">Fabricante:</label>
+                <input type="text" id="fabricante" name="fabricante">
+            </div>
+
+            
+            <div class="campo">
+                <label for="modelo">Modelo:</label>
+                <input type="text"  id="modelo" name="direccion" >
+            </div>
+
+            <div class="campo">
+                <label for="instalacion">Instalacion:</label>
+                <select id="instalacion" name="instalacion">
+                    <option value="Residencial">Residencial</option>
+                    <option value="Comercial">Comercial</option>
+                    <option value="Industrial">Industrial</option>
+                    <option value="Institucional">Institucional</option>
+                </select>
+            </div>
+
             <div class="botones">
-                <button type="submit">Guardar</button>
+                <button type="submit" onclick="registrarInstalaciones()" href="#">Guardar</button>
             </div>
+
+            <!-- Tabla contenedora -->
+
+            
         </div>
+
     </div>
+
+    
+    <table class="table table-striped" id="activos">
+        <thead>
+          <tr>
+                <th scope="col">Id</th>
+                <th scope="col">Nombre</th>
+                <th scope="col">Estado</th>
+                <th scope="col">Criticidad</th>
+                <th scope="col">Fabricante</th>
+                <th scope="col">Modelo</th>
+                <th scope="col">Instalacion</th>
+                <th scope="col">Aciones</th>
+                <th scope="col"></th>
+        </thead>
+        <tbody>
+
+        </tbody>
+      </table>
     
     <!-- Fin de la tarjeta grande -->
 
-    <script src="static/js/inicio.js"></script>
+    <!-- <script src="js/instalacion/instalacion.js"></script> -->
+    <script src="js/Activos/mostrar.js"></script>
+    <script src="js/Activos/instalacion.js"></script>
 
 </body>
 

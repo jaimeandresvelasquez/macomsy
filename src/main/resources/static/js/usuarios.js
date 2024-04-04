@@ -6,7 +6,6 @@ $(document).ready(function() {
 
 async function cargarUsuarios() {
 
-
   const request = await fetch('api/usuarios', {
     method: 'GET',
     headers: getHeaders()
