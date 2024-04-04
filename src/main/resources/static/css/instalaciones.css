@@ -59,37 +59,38 @@ header {
     margin-right: 20px;
 }
 
-.options__menu {
-    padding: 10px 20px;
+.options__menu{
+    padding: 10px 20px; /* Ajusta el espaciado */
     position: absolute;
-    top: 60px;
+    top: 60px; /* Ajusta la posición vertical */
 }
 
-.options__menu a {
+.options__menu a{
     color: #DDE6ED;
     cursor: default;
     display: block;
     position: relative;
+    transition: color 300ms;
 }
 
-.options__menu a:hover {
+.options__menu a:hover{
     color: #9DB2BF;
 }
 
-.options__menu .opcion {
+.options__menu .opcion{
     padding: 20px 0px;
     display: flex;
     align-items: center;
     position: relative;
 }
 
-.options__menu .opcion i {
+.options__menu .opcion i{
     width: 20px;
     margin-right: 20px;
     cursor: pointer;
 }
 
-.options__menu .opcion h4 {
+.options__menu .opcion h4{
     font-weight: 300;
     cursor: pointer;
 }
@@ -104,7 +105,11 @@ a.selected {
 
 .menu__side__move {
     width: 250px;
+
 }
+
+
+
 
 @media screen and (max-width: 760px) {
     .body_move {
@@ -157,7 +162,6 @@ a.selected {
 .campo.direccion textarea {
     height: 50px; /* Cambia la altura según sea necesario */
 }
-
 
 textarea {
     height: 100px; /* Altura del campo de comentarios */
@@ -227,4 +231,15 @@ textarea {
 
 .profile-options li a:hover {
     color: #dc3545; /* Cambia el color al pasar el ratón por encima */
+}
+
+.imagen-cubierta {
+    max-width: 70%; /* Ajusta el ancho máximo de la imagen al 50% */
+    height: auto; /* Mantén la proporción de la imagen */
+}
+
+
+.options__menu h4 {
+    font-size: 18px; /* Cambia el tamaño de la letra para todos los elementos <h4> */
+    border-bottom: none; /* Elimina la línea inferior */
 }

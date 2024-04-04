@@ -57,7 +57,7 @@
                 </div>
             </a>
 
-            <a href="../activos.html" class="selected">
+            <a href="activos.html" class="selected">
                 <div class="opcion">
                     <i class="fa-solid fa-laptop" title="Activos"></i>
                     <h4>Activos</h4>
@@ -88,10 +88,10 @@
 
     <!-- Contenedor de la tarjeta grande -->
     <div class="tarjeta-grande">
-        <div class="icono-casa">
+        <div class="icono-casa" id="icono-casa">
             <i class="fa-solid fa-home icono" title="Activos"></i>
             <br>
-            <input type="file" id="imagen" name="imagen" accept="image/*">
+            <input type="file" id="imagen" name="imagen" accept="image/*" onchange="mostrarImagen()">
         </div>
         <div class="contenido">
             <div class="campo">
@@ -120,6 +120,16 @@
             </div>
 
             <div class="campo">
+                <label for="instalacion">Instalacion:</label>
+                <select id="instalacion" name="instalacion">
+                    <option value="Residencial">Residencial</option>
+                    <option value="Comercial">Comercial</option>
+                    <option value="Industrial">Industrial</option>
+                    <option value="Institucional">Institucional</option>
+                </select>
+            </div>
+
+            <div class="campo">
                 <label for="fabricante">Fabricante:</label>
                 <input type="text" id="fabricante" name="fabricante">
             </div>
@@ -130,15 +140,7 @@
                 <input type="text"  id="modelo" name="direccion" >
             </div>
 
-            <div class="campo">
-                <label for="instalacion">Instalacion:</label>
-                <select id="instalacion" name="instalacion">
-                    <option value="Residencial">Residencial</option>
-                    <option value="Comercial">Comercial</option>
-                    <option value="Industrial">Industrial</option>
-                    <option value="Institucional">Institucional</option>
-                </select>
-            </div>
+
 
             <div class="botones">
                 <button type="submit" onclick="registrarInstalaciones()" href="#">Guardar</button>
@@ -159,9 +161,9 @@
                 <th scope="col">Nombre</th>
                 <th scope="col">Estado</th>
                 <th scope="col">Criticidad</th>
+                <th scope="col">Instalacion</th>
                 <th scope="col">Fabricante</th>
                 <th scope="col">Modelo</th>
-                <th scope="col">Instalacion</th>
                 <th scope="col">Aciones</th>
                 <th scope="col"></th>
         </thead>
@@ -175,7 +177,7 @@
     <!-- <script src="js/instalacion/instalacion.js"></script> -->
     <script src="js/Activos/mostrar.js"></script>
     <script src="js/Activos/instalacion.js"></script>
-
+    <script src="js/inicio.js"></script>
 </body>
 
 </html>
