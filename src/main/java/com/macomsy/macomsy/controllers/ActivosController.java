@@ -5,9 +5,7 @@ import com.macomsy.macomsy.dao.InstalacionesDao;
 import com.macomsy.macomsy.models.Activos;
 import com.macomsy.macomsy.models.Instalaciones;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
@@ -20,5 +18,16 @@ public class ActivosController {
     public List<Activos> getActivos(){
         return activosDao.getActivos();
     };
+
+    @RequestMapping(value = "api/activos/{idactivos}", method = RequestMethod.DELETE)
+    public void eliminar (@PathVariable Long idactivos){
+        activosDao.eliminar(idactivos);
+    }
+
+    @RequestMapping(value = "api/activos", method = RequestMethod.POST)
+    public void registrarActivos(@RequestBody Activos activos){
+        activosDao.registrar(activos);
+    };
+
 
 }

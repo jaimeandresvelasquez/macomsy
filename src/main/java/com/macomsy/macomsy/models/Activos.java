@@ -10,12 +10,8 @@ import lombok.Setter;
 public class Activos {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Getter
-    @Setter
-    @Column(name = "idactivos")
-    private Long idActivos;
-    @Getter @Setter @Column(name = "idinstalaciones")
-    private String idInstalaciones;
+    @Getter @Setter @Column(name = "idactivos")
+    private Long idactivos;
     @Getter @Setter @Column(name = "nombreactivo")
     private String nombreactivo;
     @Getter @Setter @Column(name = "estadoactivo")
@@ -26,4 +22,6 @@ public class Activos {
     private String fabricanteactivo;
     @Getter @Setter @Column(name = "modeloactivo")
     private String modeloactivo;
+    @Getter @Setter @Column(name = "idinstalaciones")
+    private String idinstalaciones;
 }

@@ -1,6 +1,7 @@
 package com.macomsy.macomsy.dao;
 
 import com.macomsy.macomsy.models.Activos;
+import com.macomsy.macomsy.models.Instalaciones;
 import jakarta.persistence.EntityManager;
 import jakarta.persistence.PersistenceContext;
 import jakarta.transaction.Transactional;
@@ -18,5 +19,17 @@ public class ActivosDaoImp implements ActivosDao {
     public List<Activos> getActivos() {
         String query = "FROM Activos ";
         return entityManager.createQuery(query).getResultList();
+    }
+
+    @Override
+    public void eliminar(Long idactivos) {
+        Activos activos= entityManager.find(Activos.class, idactivos);
+        entityManager.remove(activos);
+    }
+
+    @Override
+    public void registrar(Activos activos) {
+        entityManager.merge(activos);
+
     }
 }

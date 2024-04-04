@@ -25,18 +25,18 @@ async function instalaciones(){
 
     for(let instalacion of instalacionesinvertidos){
         let instalacionesHtml = '<tr>\n' +
-                                                  '<td>'+instalacion.idActivos+'</td>\n' +
-                                                  '<td>'+instalacion.nombreactivo+'</td>\n' +
-                                                  '<td>'+instalacion.estadoactivo+'</td>\n' +
-                                                  '<td>'+instalacion.criticidadactivo+'</td>\n' +
-                                                  '<td>'+instalacion.fabricanteactivo+'</td>\n' +
-                                                  '<td>'+instalacion.modeloactivo+'</td>\n' +
-                                                    '<td>'+instalacion.idInstalaciones+'</td>\n' +
-                                                '<td>\n' +
-                                                    '<a href="#" onclick="eliminarInventario('+instalacion.idinstalaciones+')" class="btn btn-danger btn-circle btn-sm">\n' +
-                                                    '<i class="fas fa-trash"></i>\n' +
-                                                    '</a>\n' +
-                                                '</td>\n' +
+                                                    '<td>'+instalacion.idactivos+'</td>\n' +
+                                                    '<td>'+instalacion.nombreactivo+'</td>\n' +
+                                                    '<td>'+instalacion.estadoactivo+'</td>\n' +
+                                                    '<td>'+instalacion.criticidadactivo+'</td>\n' +
+                                                    '<td>'+instalacion.fabricanteactivo+'</td>\n' +
+                                                    '<td>'+instalacion.modeloactivo+'</td>\n' +
+                                                    '<td>'+instalacion.idinstalaciones+'</td>\n' +
+                                                    '<td>\n' +
+                                                        '<a href="#" onclick="eliminarActivos('+instalacion.idactivos+')" class="btn btn-danger btn-circle btn-sm">\n' +
+                                                        '<i class="fas fa-trash"></i>\n' +
+                                                        '</a>\n' +
+                                                    '</td>\n' +
                                               '</tr>';
 
         listadoHtml += instalacionesHtml;
@@ -48,12 +48,12 @@ async function instalaciones(){
 
 }
 
-async function eliminarInventario(idinstalaciones) {
+async function eliminarActivos(idactivos) {
 
     if (!confirm('desea eliminar esta Instalacion')) {
         return;
     } else {
-        const request = await fetch('api/instalciones/' + idinstalaciones, {
+        const request = await fetch('api/activos/' + idactivos, {
             method: 'DELETE',
             headers: {
                 'Accept': 'application/json',

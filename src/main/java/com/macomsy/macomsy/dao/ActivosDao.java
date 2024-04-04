@@ -8,4 +8,8 @@ import java.util.List;
 public interface ActivosDao {
 
     List<Activos> getActivos();
+
+    void eliminar(Long idactivos);
+
+    void registrar(Activos activos);
 }

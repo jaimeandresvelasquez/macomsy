@@ -2,18 +2,20 @@ $(document).ready(function() {
 // on ready
 });
 
-async function registrarInstalaciones() {
+async function registrar() {
+
 
     let datos = {};
 
-    datos.nombreinstalaciones = document.getElementById('nombre').value;
-    datos.criticidadinstalaciones = document.getElementById('criticidad').value;
-    datos.familiainstalaciones = document.getElementById('familia').value;
-    datos.direccioninstalaciones = document.getElementById('direccion').value;
-    datos.comentarioinstalaciones = document.getElementById('comentarios').value;
+    datos.nombreactivo = document.getElementById('nombre').value;
+    datos.estadoactivo = document.getElementById('estado').value;
+    datos.criticidadactivo = document.getElementById('criticidad').value;
+    datos.fabricanteactivo = document.getElementById('fabricante').value;
+    datos.modeloactivo = document.getElementById('modelo').value;
+    datos.idinstalaciones = document.getElementById('instalaciones').value;
 
 
-    const request = await fetch('api/instalciones', {
+    const request = await fetch('api/activos', {
         method: 'POST',
         headers: {
             'Accept': 'application/json',
