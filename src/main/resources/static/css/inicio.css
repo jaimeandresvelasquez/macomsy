@@ -193,7 +193,7 @@ a.selected {
 /* Estilo para el icono de perfil */
 .profile-icon {
     position: absolute;
-    top: 8px;
+    top: 12px;
     right: 30px; /* Ajusta la posición horizontal del icono de perfil */
     color: #DDE6ED;
     cursor: pointer;
