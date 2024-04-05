@@ -47,3 +47,7 @@ function mostrarImagen() {
 }
 
 document.getElementById('imagen').addEventListener('change', mostrarImagen);
+
+function irAReporteMantenimiento() {
+    window.location.href = "reporteMantenimiento.html";
+}

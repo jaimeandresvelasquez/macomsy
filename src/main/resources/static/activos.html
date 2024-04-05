@@ -2,21 +2,86 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <title>Instalaciones</title>
-
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
-    rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-
-    <link rel="stylesheet" href="css/instalaciones.css">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="stylesheet" href="css/inicio.css">
     <script src="https://kit.fontawesome.com/ab43f04f6c.js" crossorigin="anonymous"></script>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 
+    <title>actvos</title>
 
+    <!-- Custom fonts for this template-->
+    <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
+    <link
+        href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i"
+        rel="stylesheet">
+
+    <!-- Custom styles for this template-->
+    <link href="css/sb-admin-2.min.css" rel="stylesheet">
+
+    <!-- Styles for registration page -->
+    <style>
+        .bg-gradient-primary-login {
+            background-color: #27374D;
+            background-image: linear-gradient(180deg, #DDE6ED 10%, #526D82 100%);
+            color: #27374D; /* Color de texto */
+        }
+
+        .btn-primary {
+            background-color: #526D82; /* Color de fondo del botón */
+            border-color: #526D82; /* Color del borde del botón */
+        }
+
+        .btn-primary:hover {
+            background-color: #9DB2BF; /* Color de fondo del botón al pasar el mouse */
+            border-color: #9DB2BF; /* Color del borde del botón al pasar el mouse */
+        }
+
+        .form-control {
+            background-color: #f9f9f9; /* Cambia el color de fondo del campo de entrada */
+            color: #27374D; /* Cambia el color de texto del campo de entrada */
+            border: none; /* Elimina el borde del campo de entrada */
+            border-radius: 0; /* Elimina el radio del borde */
+            border-bottom: 1px solid #526D82; /* Agrega un borde inferior */
+        }
+
+        .form-control:focus {
+            background-color: #f9f9f9; /* Cambia el color de fondo del campo de entrada activo */
+            color: #27374D; /* Cambia el color de texto del campo de entrada activo */
+            border-color: #526D82; /* Cambia el color del borde del campo de entrada activo */
+            box-shadow: none; /* Elimina la sombra del campo de entrada activo */
+        }
+
+        /* Estilos para el título "Registrar" */
+        .registrar-title {
+            font-size: 24px; /* Tamaño del texto */
+            font-weight: bold; /* Negrita */
+            margin-bottom: 20px; /* Espacio inferior */
+        }
+
+        /* Estilo específico para la tabla */
+        .card-body .table {
+            background-color: #f9f9f9; /* Cambia el color de fondo de la tabla */
+        }
+        
+        /* Estilo para la mitad izquierda de la tarjeta */
+        .half-card {
+            background-color: #ffff;
+            color: white;
+            padding: 20px;
+            
+        }
+        .imagen-cubierta {
+            max-width: 200px; /* Ajusta el ancho máximo de la imagen al 50% */
+            height: 120px; /* Mantén la proporción de la imagen */
+        }
+        
+    </style>
 </head>
 
-<body id="body">
+<body class="bg-gradient-primary-login">
 
     <header>
         <span id="title_header" class="show_title">
@@ -24,15 +89,19 @@
         </span>
         <!-- Icono de perfil -->
         <div class="profile-icon">
+            
             <i class="fas fa-user-circle"></i>
+            <span class="admin-text">Admin</span>
         </div>
         <!-- Menú de opciones de perfil -->
         <div class="profile-options">
             <ul>
                 <li><a href="#">Configuración</a></li>
-                <li><a href="#">Cerrar sesión</a></li>
+                <li><a href="loginMa.html" id="logout">Cerrar sesión</a></li>
             </ul>
         </div>
+        
+            
     </header>
 
     <!-- Sidebar -->
@@ -43,7 +112,7 @@
         </div>
 
         <div class="options__menu">
-            <a href="inicio.html" class="selected">
+            <a href="inicioMa.html" class="selected">
                 <div class="opcion">
                     <i class="fa-solid fa-house" title="Inicio"></i>
                     <h4>Inicio</h4>
@@ -86,93 +155,132 @@
     </div>
     <!-- Fin del sidebar -->
 
-    <!-- Contenedor de la tarjeta grande -->
-    <div class="tarjeta-grande">
-        <div class="icono-casa" id="icono-casa">
-            <i class="fa-solid fa-home icono" title="Activos"></i>
-            <br>
-            <input type="file" id="imagen" name="imagen" accept="image/*" onchange="mostrarImagen()">
-        </div>
-        <div class="contenido">
-            <div class="campo">
-                <label for="nombre">Nombre:</label>
-                <input type="text" id="nombre" name="nombre">
-            </div>
+    <div class="container">
 
-            <div class="campo">
-                <label for="estado">Estado:</label>
-                <select id="estado" name="estado">
-                    <option value="Operativo">Operativo</option>
-                    <option value="En mantenimiento">En mantenimiento</option>
-                    <option value="Fuera de servicio">Fuera de servicio</option>
-                    <option value="En desuso:">En desuso:</option>
-                </select>
-            </div>
+        <div class="card o-hidden border-0 shadow-lg my-5">
+            <div class="card-body p-0">
+                <!-- Nested Row within Card Body -->
+                <div class="row">
+                    <!-- Mitad izquierda de la tarjeta con icono y botón -->
+                    <div class="col-lg-6 half-card">
+                        <div class="p-5">
+                            <div class="text-center">
+                                <!-- Contenedor del icono o la imagen -->
+<div id="icono-casa" class="icono-casa">
+    <i class="fas fa-house fa-5x mb-4" style="color: #27374D;"></i>
+</div>
 
-            <div class="campo">
-                <label for="criticidad">Criticidad:</label>
-                <select id="criticidad" name="criticidad">
-                    <option value="critico">Crítico</option>
-                    <option value="alto">Alto</option>
-                    <option value="medio">Medio</option>
-                    <option value="bajo">Bajo</option>
-                </select>
-            </div>
+                                <!-- Botón de seleccionar archivo -->
+                                <label for="archivo" class="btn btn-primary btn-user btn-block">
+                                    <input type="file" id="imagen" name="imagen" accept="image/*" onchange="mostrarImagen()">
+                                </label>
+                            </div>
+                        </div>
+                    </div>                    
+                    <!-- Mitad derecha de la tarjeta con formulario -->
+                    <div class="col-lg-6">
+                        <div class="p-5">
+                            <div class="text-center">
+                                <!-- Título con los nuevos estilos -->
+                                <h1 class="h4 mb-4 registrar-title">Activos</h1>
+                            </div>
+                            <form class="user">
+                                <div class="form-group row">
+                                    <div class="col-sm-6 mb-3 mb-sm-0">
+                                        <input type="text" class="form-control form-control-user" id="txtNombre"
+                                            placeholder="Nombre">
+                                    </div>
+                                    <div class="col-sm-6">
+                                        <input type="text" class="form-control form-control-user" id="txtApellido"
+                                            placeholder="Estado">
+                                    </div>
+                                </div>
+                                <div class="form-group row">
+                    
+                                    <div class="col-sm-6 mb-3 mb-sm-0">
+                                        <input type="text" class="form-control form-control-user" id="txtEmail"
+                                            placeholder="Criticidad">
+                                    </div>
+                                    <div class="col-sm-6">
+                                        <input type="text" class="form-control form-control-user" id="txtTelefono"
+                                            placeholder="Instalacion">
+                                    </div>
+                    
+                                </div>
+                                <div class="form-group row">
+                                    <div class="col-sm-12 mb-3 mb-sm-0">
+                                        <input type="text" class="form-control form-control-user"
+                                            id="txt" placeholder="Fabricante">
+                                    </div>
+                                </div>
+                                <div class="form-group row">
+                                    <div class="col-sm-12 mb-3 mb-sm-0">
+                                        <input type="text" class="form-control form-control-user"
+                                            id="txt" placeholder="modelo">
+                                    </div>
+                                </div>
+                                <a onclick="registrarUsuarios()" href="#" class="btn btn-primary btn-user btn-block">
+                                    Guardar
+                                </a>
+                                <hr>
+                            </form>
+                        </div>
+                    </div>
+                    
 
-            <div class="campo">
-                <label for="instalacion">Instalacion:</label>
-                <select id="instalacion" name="instalacion">
-                    <option value="Residencial">Residencial</option>
-                    <option value="Comercial">Comercial</option>
-                    <option value="Industrial">Industrial</option>
-                    <option value="Institucional">Institucional</option>
-                </select>
-            </div>
+                            <!-- Tabla contenedora -->
+                            <div class="container-fluid">
+                                <!-- DataTales Example -->
+                                <div class="card shadow mb-4">
+                                    <div class="card-header py-3">
+                                        <h6 class="m-0 font-weight-bold text-primary">Activos</h6>
+                                    </div>
+                                    <div class="card-body">
+                                        <div class="table-responsive">
+                                            <table class="table table-bordered" id="usuarios" width="100%" cellspacing="0">
+                                                <thead>
+                                                <tr>
+                                                    <th>Id</th>
+                                                    <th>Nombre</th>
+                                                    <th>Criticidad</th>
+                                                    <th>Instalacion</th>
+                                                    <th>Fabricante</th>
+                                                    <th>Modelo</th>
+                                                </tr>
+                                                </thead>
+                                                <tbody>
 
-            <div class="campo">
-                <label for="fabricante">Fabricante:</label>
-                <input type="text" id="fabricante" name="fabricante">
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <hr>
+                        </div>
+                    </div>
+                </div>
             </div>
-
-            
-            <div class="campo">
-                <label for="modelo">Modelo:</label>
-                <input type="text"  id="modelo" name="modelo" >
-            </div>
-
-            <div class="botones">
-                <button type="submit" onclick="registrar()" href="#">Guardar</button>
-            </div>
-
         </div>
 
     </div>
 
-    
-    <table class="table table-striped" id="activos">
-        <thead>
-          <tr>
-                <th scope="col">Id</th>
-                <th scope="col">Nombre</th>
-                <th scope="col">Estado</th>
-                <th scope="col">Criticidad</th>
-                <th scope="col">Instalacion</th>
-                <th scope="col">Fabricante</th>
-                <th scope="col">Modelo</th>
-                <th scope="col">Aciones</th>
-                <th scope="col"></th>
-        </thead>
-        <tbody>
 
-        </tbody>
-      </table>
-    
-    <!-- Fin de la tarjeta grande -->
+    <!-- Bootstrap core JavaScript-->
+    <script src="vendor/jquery/jquery.min.js"></script>
+    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
 
-    <!-- <script src="js/instalacion/instalacion.js"></script> -->
-    <script src="js/Activos/mostrar.js"></script>
-    <script src="js/Activos/instalacion.js"></script>
+    <!-- Core plugin JavaScript-->
+    <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
+
+    <!-- Custom scripts for all pages-->
+    <script src="js/sb-admin-2.min.js"></script>
+
+    <!-- Inicio prgramacionJavaScript-->
     <script src="js/inicio.js"></script>
+    <script src="js/usuarios.js"></script>
+    <script src="js/registrar.js"></script>
+
 </body>
 
 </html>
