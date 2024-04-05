@@ -1,0 +1,311 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    font-family: 'Nunito', sans-serif;
+}
+/* Paleta de colores */
+:root {
+    --color-primario: #27374D;
+    --color-secundario: #DDE6ED;
+    --color-fondo: #f9f9f9;
+    --color-borde: #000;
+    --color-hover: #9DB2BF;
+    --color-boton: #27374D;
+    --color-boton-hover: #1B2536;
+}
+
+/* Resto de los estilos */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    font-family: 'Nunito', sans-serif;
+}
+
+body {
+    margin-left: 20px;
+    transition: margin-left 300ms cubic-bezier(0.085, 0.135, 0.15, 0.86);
+}
+
+.col, .row {
+    border: solid var#ffff;
+    margin: 2px;
+}
+
+header {
+    width: 100%;
+    height: 50px;
+    background: var(--color-primario);
+    display: flex;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    z-index: 200;
+}
+
+#title_header {
+    color: var(--color-secundario);
+    margin-left: 40px;
+}
+
+.show_title {
+    color: var(--color-secundario);
+    display: none;
+}
+
+.menu__side {
+    width: 60px;
+    height: 100%;
+    background: var(--color-primario);
+    position: fixed;
+    top: 0;
+    left: 0;
+    color: var(--color-secundario);
+    font-size: 18px;
+    z-index: 300;
+    overflow: hidden;
+    border-right: 20px solid var(--color-primario);
+    transition: all 300ms cubic-bezier(0.085, 0.135, 0.15, 0.86);
+}
+
+.name__page {
+    padding: 20px;
+    margin-top: 0;
+}
+
+.name__page i {
+    width: 20px;
+    margin-right: 20px;
+}
+
+.options__menu {
+    padding: 10px 20px;
+    position: absolute;
+    top: 60px;
+}
+
+.options__menu a {
+    color: var(--color-secundario);
+    cursor: default;
+    display: block;
+    position: relative;
+    transition: color 300ms;
+}
+
+.options__menu a:hover {
+    color: var(--color-hover);
+}
+
+.options__menu .opcion {
+    padding: 20px 0px;
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+.options__menu .opcion i {
+    width: 20px;
+    margin-right: 20px;
+    cursor: pointer;
+}
+
+.options__menu .opcion h4 {
+    font-weight: 300;
+    cursor: pointer;
+}
+
+a.selected {
+    color: var(--color-secundario);
+}
+
+.body_move {
+    margin-left: 250px;
+}
+
+.menu__side__move {
+    width: 250px;
+}
+
+@media screen and (max-width: 760px) {
+    .body_move {
+        margin-left: 0px;
+    }
+
+    .menu__side__move {
+        width: 80px;
+        left: -80px;
+    }
+}
+
+.tarjeta-grande {
+    border: solid var(--color-borde);
+    display: flex;
+    align-items: flex-start;
+    padding: 20px;
+    border-radius: 8px;
+    margin: 10px;
+    background-color: var(--color-fondo);
+    position: absolute;
+    top: 0;
+    width: calc(100% - 40px);
+    left: 50px;
+    top: 40px;
+}
+
+.contenido {
+    width: 100%;
+    padding: 20px;
+    border: none;
+}
+
+.campo {
+    margin-bottom: 10px;
+}
+
+.campo input[type="text"],
+.campo textarea {
+    width: calc(100% - 20px);
+}
+
+textarea {
+    height: 100px;
+    resize: vertical;
+}
+
+.botones {
+    width: 100%;
+    text-align: left;
+    margin-top: 20px;
+}
+
+.botones button {
+    width: 150px;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: var(--color-boton);
+    color: var(--color-secundario);
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.botones button:hover {
+    background-color: var(--color-boton-hover);
+}
+
+.profile-icon {
+    position: absolute;
+    top: 20px;
+    right: 50px;
+    color: var(--color-secundario);
+    cursor: pointer;
+    font-size: 24px;
+}
+
+.profile-options {
+    position: absolute;
+    top: 50px;
+    right: 30px;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    padding: 10px;
+    display: none;
+    z-index: 1000;
+    text-align: left;
+    min-width: 120px;
+}
+
+.profile-options ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.profile-options li {
+    padding: 10px 20px;
+}
+
+.profile-options li a {
+    color: #333;
+    text-decoration: none;
+}
+
+.profile-options li a:hover {
+    color: #dc3545;
+}
+
+.imagen-cubierta {
+    max-width: 70%;
+    height: auto;
+}
+
+.options__menu h4 {
+    font-size: 18px;
+    border-bottom: none;
+}
+
+#title_header h1 {
+    font-size: 28px;
+}
+
+/* Botón de crear fuera del contenedor */
+#btnCrear {
+    position: absolute; /* Establece la posición absoluta */
+    bottom: 20px; /* Distancia desde la parte inferior del contenedor */
+    left: 590px; /* Distancia desde el borde izquierdo del contenedor */
+}
+.container {
+    background-color: #f9f9f9; /* Color de fondo */
+    border: 1px solid #ddd; /* Borde */
+    border-radius: 8px; /* Bordes redondeados */
+    padding: 20px; /* Espacio interno */
+    margin-bottom: 20px; /* Espacio inferior */
+}
+
+.container h3, .container h4 {
+    color: #333; /* Color del texto */
+    margin-bottom: 10px; /* Espacio inferior entre los títulos y los campos */
+}
+
+.container label {
+    font-weight: bold; /* Texto en negrita */
+}
+
+.container input[type="text"],
+.container input[type="tel"],
+.container input[type="date"] {
+    width: 100%; /* Ancho completo */
+    padding: 8px; /* Espaciado interno */
+    margin-bottom: 10px; /* Espacio inferior entre los campos */
+    border: 1px solid #ccc; /* Borde */
+    border-radius: 4px; /* Bordes redondeados */
+    box-sizing: border-box; /* Tamaño de caja incluyendo el borde */
+}
+
+
+.container {
+    margin-bottom: 0px; /* Ajusta el espacio entre cada sección */
+}
+
+.row {
+    margin-bottom: 10px; /* Ajusta el espacio entre cada fila */
+}
+
+.col {
+    margin-right: 10px; /* Ajusta el espacio entre cada columna */
+}
+
+/* Aplica estilos solo a los input dentro de las columnas */
+.col input[type="text"],
+.col input[type="date"],
+.col input[type="tel"] {
+    width: calc(100% - 10px); /* Calcula el ancho para que los input estén juntos */
+    margin-right: 10px; /* Ajusta el espacio entre los input */
+}
