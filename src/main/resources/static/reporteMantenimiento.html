@@ -190,10 +190,7 @@
                         <label for="fecha_entrega">Fecha de entrega:</label>
                         <input type="date" id="fecha_entrega" name="fecha_entrega">
                     </div>
-                    <div class="col">
-                        <label for="numero_reporte">Número de reporte:</label>
-                        <input type="text" id="numero_reporte" name="numero_reporte">
-                    </div>
+
                 </div>
             </div>
 
@@ -276,40 +273,42 @@
                     </div>
                 </div>
             </div>
+
+            <div class="button">
+                <div class="row">
+                    <div class="col">
+                        <button class="btn btn-primary btn-lg" id="btnCrear">Crear</button>
+                    </div>
+                </div>
+            </div>
+        
+            <!-- Tabla -->
+            <div class="table-responsive">
+                <table class="table table-striped" id="activos">
+                    <thead>
+                        <tr>
+                            <th scope="col">Id</th>
+                            <th scope="col">Nombre</th>
+                            <th scope="col">Estado</th>
+                            <th scope="col">Criticidad</th>
+                            <th scope="col">Fabricante</th>
+                            <th scope="col">Modelo</th>
+                            <th scope="col">Instalación</th>
+                            <th scope="col">Acciones</th>
+                            <th scope="col"></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+        
+                    </tbody>
+                </table>
+            </div>
+            </div>
+        </body>
         </div>
     </div>
     <!-- Botón "Crear" -->
-    <div class="button">
-        <div class="row">
-            <div class="col">
-                <button class="btn btn-primary btn-lg" id="btnCrear">Crear</button>
-            </div>
-        </div>
-    </div>
 
-    <!-- Tabla -->
-    <div class="table-responsive">
-        <table class="table table-striped" id="activos">
-            <thead>
-                <tr>
-                    <th scope="col">Id</th>
-                    <th scope="col">Nombre</th>
-                    <th scope="col">Estado</th>
-                    <th scope="col">Criticidad</th>
-                    <th scope="col">Fabricante</th>
-                    <th scope="col">Modelo</th>
-                    <th scope="col">Instalación</th>
-                    <th scope="col">Acciones</th>
-                    <th scope="col"></th>
-                </tr>
-            </thead>
-            <tbody>
-
-            </tbody>
-        </table>
-    </div>
-    </div>
-</body>
 
 </html>
 
