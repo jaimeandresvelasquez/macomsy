@@ -6,9 +6,11 @@
     <title>Instalaciones</title>
 
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
-    rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+        rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+        crossorigin="anonymous">
 
-    <link rel="stylesheet" href="css/instalaciones.css">
+    <link rel="stylesheet" href="css/reporteMantenimiento.css">
+
     <script src="https://kit.fontawesome.com/ab43f04f6c.js" crossorigin="anonymous"></script>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
@@ -87,160 +89,232 @@
     </div>
     <!-- Fin del sidebar -->
 
-    <!-- Contenedor de la tarjeta grande -->
-    <div class="tarjeta-grande">
+    <!DOCTYPE html>
+<html lang="en">
 
-        
+<head>
+    <meta charset="UTF-8">
+    <title>Instalaciones</title>
 
-        
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+        rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+        crossorigin="anonymous">
 
-        <div class="contenido">
-            
+    <link rel="stylesheet" href="css/reporteMantenimiento.css">
 
-            <div class="container">
-                <div class="row">
-
-                    <h3>Reporte de mantenimiento</h3>
-
-                </div>
-
-                <div class="row">
-                  <div class="col">
-                    <div class="fecha-input">
-                        <label for="fecha">Fecha resivido:</label>
-                        <input type="date" id="fecha" name="fecha">
-                      </div>
-                  </div>
-                  <div class="col">
-                    <div class="fecha-input">
-                        <label for="fecha">Fecha de entrega:</label>
-                        <input type="date" id="fecha" name="fecha">
-                      </div>
-                  </div>
-                  <div class="col">
-                    N° de reporte
-                  </div>
-                </div>
-            </div>
-
-            <div class="container">
-                <div class="row">
-                    <h4>Datos tecnicos del encargado</h4>
-                </div>
-            </div>
-
-            <div class="container">
-                <div class="row">
-                  <div class="col">
-                    <label for="modelo">Nombre:</label>
-                    <input type="text"  id="nombre" name="nombre" >
-                  </div>
-                  <div class="col">
-                    Telefono:
-                  </div>
-                </div>
-            </div>
-            <div class="container">
-                <div class="row">
-                  <div class="col">
-                    Grado:
-                  </div>
-                  <div class="col">
-                    Firma
-                  </div>
-                </div>
-            </div>
-
-            <div class="container">
-                <div class="row">
-                    <h4>Datos tecnicos del Cliente</h4>
-                </div>
-            </div>
-
-            <div class="container">
-                <div class="row">
-                  <div class="col">
-                    Nombre:
-                  </div>
-                  <div class="col">
-                    Telefono:
-                  </div>
-                </div>
-            </div>
-            <div class="container">
-                <div class="row">
-                  <div class="col">
-                    Grado:
-                  </div>
-                  <div class="col">
-                    Firma
-                  </div>
-                </div>
-            </div>
-
-            <div class="container">
-                <div class="row">
-                 <h4>Descripcion del equipo</h4>
-                </div>
-            </div>
+    <script src="https://kit.fontawesome.com/ab43f04f6c.js" crossorigin="anonymous"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 
 
+</head>
 
-            <div class="container">
-                <div class="row">
-                  <div class="col">
-                    Equipo:
-                  </div>
-                  <div class="col">
-                    Fabricante
-                  </div>
-                  <div class="col">
-                    Modelo
-                  </div>
-                </div>
-            </div>
+<body id="body">
 
+    <header>
+        <span id="title_header" class="show_title">
+            <h1>MACOMSY</h1>
+        </span>
+        <!-- Icono de perfil -->
+        <div class="profile-icon">
+            <i class="fas fa-user-circle"></i>
+        </div>
+        <!-- Menú de opciones de perfil -->
+        <div class="profile-options">
+            <ul>
+                <li><a href="#">Configuración</a></li>
+                <li><a href="#">Cerrar sesión</a></li>
+            </ul>
+        </div>
+    </header>
 
-            <div class="container">
-                <div class="row">
-                  <div class="col">
-                    Falla
-                  </div>
-                  <div class="col">
-                    Causa
-                  </div>
-                  <div class="col">
-                    Solucion
-                  </div>
-                </div>
-            </div>
-
-
-            <table class="table table-striped" id="activos">
-                <thead>
-                  <tr>
-                        <th scope="col">Id</th>
-                        <th scope="col">Nombre</th>
-                        <th scope="col">Estado</th>
-                        <th scope="col">Criticidad</th>
-                        <th scope="col">Fabricante</th>
-                        <th scope="col">Modelo</th>
-                        <th scope="col">Instalacion</th>
-                        <th scope="col">Aciones</th>
-                        <th scope="col"></th>
-                </thead>
-                <tbody>
-        
-                </tbody>
-              </table>
-
+    <!-- Sidebar -->
+    <div class="menu__side" id="menu_side">
+        <div class="name__page">
+            <i class="fa-solid fa-bars" id="btn_open"></i>
+            <h2></h2>
         </div>
 
+        <div class="options__menu">
+            <a href="inicio.html" class="selected">
+                <div class="opcion">
+                    <i class="fa-solid fa-house" title="Inicio"></i>
+                    <h4>Inicio</h4>
+                </div>
+            </a>
+
+            <a href="instalaciones.html" class="selected">
+                <div class="opcion">
+                    <i class="fa-solid fa-building" title="Instalaciones"></i>
+                    <h4>Instalaciones</h4>
+                </div>
+            </a>
+
+            <a href="activos.html" class="selected">
+                <div class="opcion">
+                    <i class="fa-solid fa-laptop" title="Activos"></i>
+                    <h4>Activos</h4>
+                </div>
+            </a>
+
+            <a href="mantenimiento.html" class="selected">
+                <div class="opcion">
+                    <i class="fa-solid fa-wrench" title="Mantenimiento"></i>
+                    <h4>Mantenimiento</h4>
+                </div>
+            </a>
+            <a href="ordenes.html" class="selected">
+                <div class="opcion">
+                    <i class="fa-solid fa-list" title="Ordenes de trabajo"></i>
+                    <h4>Ordenes de trabajo</h4>
+                </div>
+            </a>
+            <a href="T_humano.html" class="selected">
+                <div class="opcion">
+                    <i class="fa-solid fa-user-tie" title="Talento humano"></i>
+                    <h4>Talento humano</h4>
+                </div>
+            </a>
+        </div>
+    </div>
+    <!-- Fin del sidebar -->
+    <div class="tarjeta-grande">
+        <div class="contenido">
+            <div class="container">
+                <h3>Reporte de mantenimiento</h3>
+                <div class="row">
+                    <div class="col">
+                        <label for="fecha_recibido">Fecha recibido:</label>
+                        <input type="date" id="fecha_recibido" name="fecha_recibido">
+                    </div>
+                    <div class="col">
+                        <label for="fecha_entrega">Fecha de entrega:</label>
+                        <input type="date" id="fecha_entrega" name="fecha_entrega">
+                    </div>
+                    <div class="col">
+                        <label for="numero_reporte">Número de reporte:</label>
+                        <input type="text" id="numero_reporte" name="numero_reporte">
+                    </div>
+                </div>
+            </div>
+
+            <div class="container">
+                <h4>Datos técnicos del encargado</h4>
+                <div class="row">
+                    <div class="col">
+                        <label for="nombre_encargado">Nombre:</label>
+                        <input type="text" id="nombre_encargado" name="nombre_encargado">
+                    </div>
+                    <div class="col">
+                        <label for="telefono_encargado">Teléfono:</label>
+                        <input type="tel" id="telefono_encargado" name="telefono_encargado">
+                    </div>
+                    <div class="col">
+                        <label for="grado_encargado">Grado:</label>
+                        <input type="text" id="grado_encargado" name="grado_encargado">
+                    </div>
+                    <div class="col">
+                        <label for="firma_encargado">Firma:</label>
+                        <input type="text" id="firma_encargado" name="firma_encargado">
+                    </div>
+                </div>
+            </div>
+
+            <div class="container">
+                <h4>Datos técnicos del Cliente</h4>
+                <div class="row">
+                    <div class="col">
+                        <label for="nombre_cliente">Nombre:</label>
+                        <input type="text" id="nombre_cliente" name="nombre_cliente">
+                    </div>
+                    <div class="col">
+                        <label for="telefono_cliente">Teléfono:</label>
+                        <input type="tel" id="telefono_cliente" name="telefono_cliente">
+                    </div>
+                    <div class="col">
+                        <label for="grado_cliente">Grado:</label>
+                        <input type="text" id="grado_cliente" name="grado_cliente">
+                    </div>
+                    <div class="col">
+                        <label for="firma_cliente">Firma:</label>
+                        <input type="text" id="firma_cliente" name="firma_cliente">
+                    </div>
+                </div>
+            </div>
+
+            <div class="container">
+                <h4>Descripción del equipo</h4>
+                <div class="row">
+                    <div class="col">
+                        <label for="equipo">Equipo:</label>
+                        <input type="text" id="equipo" name="equipo">
+                    </div>
+                    <div class="col">
+                        <label for="fabricante">Fabricante:</label>
+                        <input type="text" id="fabricante" name="fabricante">
+                    </div>
+                    <div class="col">
+                        <label for="modelo">Modelo:</label>
+                        <input type="text" id="modelo" name="modelo">
+                    </div>
+                </div>
+            </div>
+
+            <div class="container">
+                <h4>Falla del equipo</h4>
+                <div class="row">
+                    <div class="col">
+                        <label for="falla">Falla:</label>
+                        <input type="text" id="falla" name="falla">
+                    </div>
+                    <div class="col">
+                        <label for="causa">Causa:</label>
+                        <input type="text" id="causa" name="causa">
+                    </div>
+                    <div class="col">
+                        <label for="solucion">Solución:</label>
+                        <input type="text" id="solucion" name="solucion">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Botón "Crear" -->
+    <div class="button">
+        <div class="row">
+            <div class="col">
+                <button class="btn btn-primary btn-lg" id="btnCrear">Crear</button>
+            </div>
+        </div>
     </div>
 
-    
-    
-    
+    <!-- Tabla -->
+    <div class="table-responsive">
+        <table class="table table-striped" id="activos">
+            <thead>
+                <tr>
+                    <th scope="col">Id</th>
+                    <th scope="col">Nombre</th>
+                    <th scope="col">Estado</th>
+                    <th scope="col">Criticidad</th>
+                    <th scope="col">Fabricante</th>
+                    <th scope="col">Modelo</th>
+                    <th scope="col">Instalación</th>
+                    <th scope="col">Acciones</th>
+                    <th scope="col"></th>
+                </tr>
+            </thead>
+            <tbody>
+
+            </tbody>
+        </table>
+    </div>
+    </div>
+</body>
+
+</html>
+
+
     <!-- Fin de la tarjeta grande -->
 
     <!-- <script src="js/instalacion/instalacion.js"></script> -->

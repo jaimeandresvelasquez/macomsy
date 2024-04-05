@@ -80,6 +80,21 @@
         }
         
     </style>
+
+
+<script>
+    function mostrarImagen(input) {
+        if (input.files && input.files[0]) {
+            var reader = new FileReader();
+    
+            reader.onload = function (e) {
+                document.getElementById('imagen').src = e.target.result;
+            };
+    
+            reader.readAsDataURL(input.files[0]);
+        }
+    }
+    </script>
 </head>
 
 <body class="bg-gradient-primary-login">
@@ -167,14 +182,15 @@
                         <div class="p-5">
                             <div class="text-center">
                                 <!-- Contenedor del icono o la imagen -->
-<div id="icono-casa" class="icono-casa">
-    <i class="fas fa-house fa-5x mb-4" style="color: #27374D;"></i>
-</div>
+                                <div id="icono-casa" class="icono-casa">
+                                    <i class="fas fa-house fa-5x mb-4" style="color: #27374D;"></i>
 
-                                <!-- Botón de seleccionar archivo -->
-                                <label for="archivo" class="btn btn-primary btn-user btn-block">
-                                    <input type="file" id="imagen" name="imagen" accept="image/*" onchange="mostrarImagen()">
-                                </label>
+                                    <h2 style="color: #27374D;">Subir y mostrar imagen</h2>
+
+                                    <input type="file" accept="image/*" onchange="mostrarImagen(this)">
+                                    <br><br>
+                                    <img id="imagen" src="#" alt="Tu imagen aparecerá aquí" width="300">
+                                </div>
                             </div>
                         </div>
                     </div>                    
