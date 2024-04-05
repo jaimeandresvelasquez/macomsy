@@ -11,6 +11,8 @@
     <link rel="stylesheet" href="css/inicio.css">
     <script src="https://kit.fontawesome.com/ab43f04f6c.js" crossorigin="anonymous"></script>
 
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
     <title>Instalacion</title>
 
     <!-- Custom fonts for this template-->
@@ -80,6 +82,23 @@
         }
         
     </style>
+
+
+
+
+<script>
+    function mostrarImagen(input) {
+        if (input.files && input.files[0]) {
+            var reader = new FileReader();
+    
+            reader.onload = function (e) {
+                document.getElementById('imagen').src = e.target.result;
+            };
+    
+            reader.readAsDataURL(input.files[0]);
+        }
+    }
+    </script>
 </head>
 
 <body class="bg-gradient-primary-login">
@@ -168,14 +187,22 @@
                             <div class="text-center">
                                 <!-- Contenedor del icono o la imagen -->
                                 <!-- Contenedor del icono o la imagen -->
-<div id="icono-casa" class="icono-casa">
-    <i class="fas fa-house fa-5x mb-4" style="color: #27374D;"></i>
-</div>
+                                <div id="icono-casa" class="icono-casa">
+                                    <i class="fas fa-house fa-5x mb-4" style="color: #27374D;"></i>
+
+                                    <h2 style="color: #27374D;">Subir y mostrar imagen</h2>
+
+                                    <input type="file" accept="image/*" onchange="mostrarImagen(this)">
+                                    <br><br>
+                                    <img id="imagen" src="#" alt="Tu imagen aparecerá aquí" width="300">
+                                    </div>
 
                                 <!-- Botón de seleccionar archivo -->
-                                <label for="archivo" class="btn btn-primary btn-user btn-block">
-                                    <input type="file" id="imagen" name="imagen" accept="image/*" onchange="mostrarImagen()">
-                                </label>
+                                
+
+
+
+
                             </div>
                         </div>
                     </div>                    
@@ -189,22 +216,30 @@
                             <form class="user">
                                 <div class="form-group row">
                                     <div class="col-sm-6 mb-3 mb-sm-0">
-                                        <input type="text" class="form-control form-control-user" id="txtNombre"
+                                        <input type="text" class="form-control form-control-user" id="nombre"
                                             placeholder="Nombre">
                                     </div>
                                     <div class="col-sm-6">
-                                        <input type="text" class="form-control form-control-user" id="txtApellido"
-                                            placeholder="Criticidad">
+                                        <select id="criticidad" name="criticidad" class="form-control form-control-user" placeholder="criticidad">
+                                            <option value="critico">Crítico</option>
+                                            <option value="alto">Alto</option>
+                                            <option value="medio">Medio</option>
+                                            <option value="bajo">Bajo</option>
+                                        </select>
                                     </div>
                                 </div>
                                 <div class="form-group row">
                     
                                     <div class="col-sm-6 mb-3 mb-sm-0">
-                                        <input type="text" class="form-control form-control-user" id="txtEmail"
-                                            placeholder="Familia">
+                                        <select id="familia" name="familia" class="form-control form-control-user" placeholder="familia">
+                                            <option value="Residencial">Residencial</option>
+                                            <option value="Comercial">Comercial</option>
+                                            <option value="Industrial">Industrial</option>
+                                            <option value="Institucional">Institucional</option>
+                                        </select>
                                     </div>
                                     <div class="col-sm-6">
-                                        <input type="text" class="form-control form-control-user" id="txtTelefono"
+                                        <input type="text" class="form-control form-control-user" id="direccion"
                                             placeholder="Direccion">
                                     </div>
                     
@@ -212,10 +247,10 @@
                                 <div class="form-group row">
                                     <div class="col-sm-12 mb-3 mb-sm-0">
                                         <input type="text" class="form-control form-control-user"
-                                            id="txt" placeholder="Comentarios">
+                                            id="comentarios" placeholder="comentarios">
                                     </div>
                                 </div>
-                                <a onclick="registrarUsuarios()" href="#" class="btn btn-primary btn-user btn-block">
+                                <a onclick="registrarInstalaciones()" href="#" class="btn btn-primary btn-user btn-block">
                                     Guardar
                                 </a>
                                 <hr>
@@ -227,29 +262,22 @@
                             <!-- Tabla contenedora -->
                             <div class="container-fluid">
                                 <!-- DataTales Example -->
-                                <div class="card shadow mb-4">
-                                    <div class="card-header py-3">
-                                        <h6 class="m-0 font-weight-bold text-primary">Instalaciones</h6>
-                                    </div>
-                                    <div class="card-body">
-                                        <div class="table-responsive">
-                                            <table class="table table-bordered" id="usuarios" width="100%" cellspacing="0">
-                                                <thead>
-                                                <tr>
-                                                    <th>Id</th>
-                                                    <th>Nombre</th>
-                                                    <th>Criticidad</th>
-                                                    <th>Familia</th>
-                                                    <th>Direccion</th>
-                                                </tr>
-                                                </thead>
-                                                <tbody>
-
-                                                </tbody>
-                                            </table>
-                                        </div>
-                                    </div>
-                                </div>
+                                <table class="table table-striped" id="instalacion">
+                                    <thead>
+                                      <tr>
+                                            <th scope="col">Id</th>
+                                            <th scope="col">Nombre</th>
+                                            <th scope="col">Criticidad</th>
+                                            <th scope="col">Familia</th>
+                                            <th scope="col">Direccion</th>
+                                            <th scope="col">Comentario</th>
+                                            <th scope="col">Aciones</th>
+                                            <th scope="col"></th>
+                                    </thead>
+                                    <tbody>
+                            
+                                    </tbody>
+                                  </table>
                             </div>
                             <hr>
                         </div>
@@ -261,20 +289,11 @@
     </div>
 
 
-    <!-- Bootstrap core JavaScript-->
-    <script src="vendor/jquery/jquery.min.js"></script>
-    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <!-- Fin de la tarjeta grande -->
 
-    <!-- Core plugin JavaScript-->
-    <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
-
-    <!-- Custom scripts for all pages-->
-    <script src="js/sb-admin-2.min.js"></script>
-
-    <!-- Inicio prgramacionJavaScript-->
-    <script src="js/inicio.js"></script>
-    <script src="js/usuarios.js"></script>
-    <script src="js/registrar.js"></script>
+    <!-- <script src="js/instalacion/instalacion.js"></script> -->
+    <script src="js/instalacion/mostrar.js"></script>
+    <script src="js/instalacion/instalacion.js"></script>
 
 </body>
 
