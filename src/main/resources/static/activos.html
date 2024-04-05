@@ -9,6 +9,7 @@
     <meta name="author" content="">
     <link rel="stylesheet" href="css/inicio.css">
     <script src="https://kit.fontawesome.com/ab43f04f6c.js" crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 
     <title>actvos</title>
 
@@ -187,39 +188,51 @@
                             <form class="user">
                                 <div class="form-group row">
                                     <div class="col-sm-6 mb-3 mb-sm-0">
-                                        <input type="text" class="form-control form-control-user" id="txtNombre"
+                                        <input type="text" class="form-control form-control-user" id="nombre"
                                             placeholder="Nombre">
                                     </div>
                                     <div class="col-sm-6">
-                                        <input type="text" class="form-control form-control-user" id="txtApellido"
-                                            placeholder="Estado">
+                                        <select id="estado" name="estado"class="form-control form-control-user">
+                                            <option value="Operativo">Operativo</option>
+                                            <option value="En mantenimiento">En mantenimiento</option>
+                                            <option value="Fuera de servicio">Fuera de servicio</option>
+                                            <option value="En desuso:">En desuso:</option>
+                                        </select>
                                     </div>
                                 </div>
                                 <div class="form-group row">
                     
                                     <div class="col-sm-6 mb-3 mb-sm-0">
-                                        <input type="text" class="form-control form-control-user" id="txtEmail"
-                                            placeholder="Criticidad">
+                                        <select id="criticidad" name="criticidad" class="form-control form-control-user">
+                                            <option value="critico">Crítico</option>
+                                            <option value="alto">Alto</option>
+                                            <option value="medio">Medio</option>
+                                            <option value="bajo">Bajo</option>
+                                        </select>
                                     </div>
                                     <div class="col-sm-6">
-                                        <input type="text" class="form-control form-control-user" id="txtTelefono"
-                                            placeholder="Instalacion">
+                                        <input type="text" class="form-control form-control-user" id="fabricante"
+                                            placeholder="fabricante">
                                     </div>
                     
                                 </div>
                                 <div class="form-group row">
                                     <div class="col-sm-12 mb-3 mb-sm-0">
                                         <input type="text" class="form-control form-control-user"
-                                            id="txt" placeholder="Fabricante">
+                                            id="modelo" placeholder="Modelo">
                                     </div>
                                 </div>
                                 <div class="form-group row">
                                     <div class="col-sm-12 mb-3 mb-sm-0">
-                                        <input type="text" class="form-control form-control-user"
-                                            id="txt" placeholder="modelo">
+                                        <select id="instalaciones" name="instalaciones" class="form-control form-control-user">
+                                            <option value="Residencial">Residencial</option>
+                                            <option value="Comercial">Comercial</option>
+                                            <option value="Industrial">Industrial</option>
+                                            <option value="Institucional">Institucional</option>
+                                        </select>
                                     </div>
                                 </div>
-                                <a onclick="registrarUsuarios()" href="#" class="btn btn-primary btn-user btn-block">
+                                <a onclick="registrar()" href="#" class="btn btn-primary btn-user btn-block">
                                     Guardar
                                 </a>
                                 <hr>
@@ -231,30 +244,23 @@
                             <!-- Tabla contenedora -->
                             <div class="container-fluid">
                                 <!-- DataTales Example -->
-                                <div class="card shadow mb-4">
-                                    <div class="card-header py-3">
-                                        <h6 class="m-0 font-weight-bold text-primary">Activos</h6>
-                                    </div>
-                                    <div class="card-body">
-                                        <div class="table-responsive">
-                                            <table class="table table-bordered" id="usuarios" width="100%" cellspacing="0">
-                                                <thead>
-                                                <tr>
-                                                    <th>Id</th>
-                                                    <th>Nombre</th>
-                                                    <th>Criticidad</th>
-                                                    <th>Instalacion</th>
-                                                    <th>Fabricante</th>
-                                                    <th>Modelo</th>
-                                                </tr>
-                                                </thead>
-                                                <tbody>
-
-                                                </tbody>
-                                            </table>
-                                        </div>
-                                    </div>
-                                </div>
+                                <table class="table table-striped" id="activos">
+                                    <thead>
+                                      <tr>
+                                            <th scope="col">Id</th>
+                                            <th scope="col">Nombre</th>
+                                            <th scope="col">Estado</th>
+                                            <th scope="col">Criticidad</th>
+                                            <th scope="col">Fabricante</th>
+                                            <th scope="col">Modelo</th>
+                                            <th scope="col">Instalacion</th>
+                                            <th scope="col">Aciones</th>
+                                            <th scope="col"></th>
+                                    </thead>
+                                    <tbody>
+                            
+                                    </tbody>
+                                  </table>
                             </div>
                             <hr>
                         </div>
@@ -266,20 +272,11 @@
     </div>
 
 
-    <!-- Bootstrap core JavaScript-->
-    <script src="vendor/jquery/jquery.min.js"></script>
-    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <!-- Fin de la tarjeta grande -->
 
-    <!-- Core plugin JavaScript-->
-    <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
-
-    <!-- Custom scripts for all pages-->
-    <script src="js/sb-admin-2.min.js"></script>
-
-    <!-- Inicio prgramacionJavaScript-->
-    <script src="js/inicio.js"></script>
-    <script src="js/usuarios.js"></script>
-    <script src="js/registrar.js"></script>
+    <!-- <script src="js/instalacion/instalacion.js"></script> -->
+    <script src="js/Activos/mostrar.js"></script>
+    <script src="js/Activos/instalacion.js"></script>
 
 </body>
 
