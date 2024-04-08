@@ -183,11 +183,16 @@
                 <h3>Orden de trabajo</h3>
                 <div class="row">
                     <div class="col">
-                        <label for="prioridad">Prioridad:</label>
-                        <input type="text" id="prioridad" name="prioridad">
+                        <label for="numero_reporte">Prioridad:</label>
+                        <select id="prioridad" name="prioridad" class="form-control form-control-user" placeholder="prioridad">
+                            <option value="critico">Crítico</option>
+                            <option value="alto">Alto</option>
+                            <option value="medio">Medio</option>
+                            <option value="bajo">Bajo</option>
+                        </select>
                     </div>
                     <div class="col">
-                        <label for="numero_reporte">Cuenta N●:</label>
+                        <label for="numero_reporte">Cuenta N°:</label>
                         <input type="text" id="Cuenta" name="Cuenta">
                     </div>
  
@@ -206,22 +211,15 @@
                             <label for="fecha">Fecha:</label>
                             <input type="date" id="fecha" name="fecha">
                         </div>
-    
-
-
-
-    
-
-    
 
                     <div class="row">
                         <div class="col">
                             <label for="equipo">Equipo:</label>
-                            <input type="text" id="supervisor" name="supervisor">
+                            <input type="text" id="equipo" name="equipo">
                         </div>
                         <div class="col">
                             <label for="sección">Ubicación:</label>
-                            <input type="tel" id="seccion" name="seccion">
+                            <input type="tel" id="ubicacion" name="ubicacion">
                         </div>
 
 
@@ -232,28 +230,47 @@
                             </div>
     
                         </div>
-
-      
-
-      
-      
-
-   
-
         
-    <!-- Botón "Crear" -->
-    <div class="button">
-        <div class="row">
-            <div class="col">
-                <button class="btn btn-primary btn-lg" id="btnCrear">Crear</button>
-            </div>
-        </div>
+                        <!-- Botón "Crear" -->
+                        <a onclick="registrarOrdenes()" href="#" class="btn btn-primary btn-user btn-block">
+                            Guardar
+                        </a>
+
+                        <hr>
+                        <hr>
+
+                        <div class="container-fluid">
+                            <!-- DataTales Example -->
+                            <table class="table table-striped" id="ordenes">
+                                <thead>
+                                  <tr>
+                                        <th scope="col">Orden N°</th>
+                                        <th scope="col">Prioridad</th>
+                                        <th scope="col">Requerido por:</th>
+                                        <th scope="col">Aprobado por:</th>
+                                        <th scope="col">Fecha</th>
+                                        <th scope="col">Equipo</th>
+                                        <th scope="col">Ubicacion</th>
+                                        <th scope="col">Descripcion pro</th>
+                                        <th scope="col">Aciones</th>
+                                        <th scope="col"></th>
+                                </thead>
+                                <tbody>
+                        
+                                </tbody>
+                              </table>
+                        </div>
+
+
+
+
     </div>
+
     <!-- Fin de las tarjetas -->
 
     <!-- <script src="js/instalacion/instalacion.js"></script> -->
-    <script src="js/Activos/mostrar.js"></script>
-    <script src="js/Activos/instalacion.js"></script>
+    <script src="js/Ordenes/mostrar.js"></script>
+    <script src="js/Ordenes/instalacion.js"></script>
 
 </body>
 

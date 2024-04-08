@@ -1,9 +1,9 @@
-$(document).ready(function() {
-    instalaciones();
+$(document).ready(function () {
+    insta();
 });
 
-async function instalaciones() {
-    const request = await fetch('api/activos', {
+async function insta() {
+    const request = await fetch('api/ordenes', {
         method: 'GET',
         headers: {
             'Accept': 'application/json',
@@ -21,9 +21,25 @@ async function instalaciones() {
     let optionsHtml = '';
 
     for (let activo of activosInvertidos) {
-        optionsHtml += '<option value="' + activo.nombreactivo + '">' + activo.nombreactivo + '</option>';
+        optionsHtml +=
+            '<div className="tarjetas__container" style="margin-top: 100px;">'+
+            '<div className="tarjeta">' +
+            '<div class="titulo">' +
+            '<h3 class="numero-caso">[CASO: ' + activo.idordentrabajo + ']</h3>' +
+            '</div>' +
+            '<div class="contenido">' +
+            '<i class="fa-solid fa-wrench icono" title="Ordenes"></i>' +
+            '<p class="texto">' + activo.descripcion + '</p>' +
+            '<p class="urgencia urgencia-alta">' + activo.prioridad + '</p>' +
+            '</div>' +
+            '</div>'+
+            '</div>'
+        ;
     }
 
-
-    document.getElementById('instalaciones').innerHTML = optionsHtml;
+    document.getElementById('tarjetaorden').innerHTML = optionsHtml;
 }
+
+
+
+

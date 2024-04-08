@@ -174,6 +174,8 @@
             </a>
         </div>
     </div>
+
+    
     <!-- Fin del sidebar -->
     <div class="tarjeta-grande">
         <div class="contenido">
@@ -181,12 +183,12 @@
                 <h3>Reporte de mantenimiento</h3>
                 <div class="row">
                     <div class="col">
-                        <label for="fecha_recibido">Fecha recibido:</label>
-                        <input type="date" id="fecha_recibido" name="fecha_recibido">
+                        <label for="fecharecibido">Fecha recibido:</label>
+                        <input type="date" id="fecharecibido" name="fecharecibido">
                     </div>
                     <div class="col">
-                        <label for="fecha_entrega">Fecha de entrega:</label>
-                        <input type="date" id="fecha_entrega" name="fecha_entrega">
+                        <label for="fechaentrega">Fecha de entrega:</label>
+                        <input type="date" id="fechaentrega" name="fechaentrega">
                     </div>
 
                 </div>
@@ -196,20 +198,20 @@
                 <h4>Datos técnicos del encargado</h4>
                 <div class="row">
                     <div class="col">
-                        <label for="nombre_encargado">Nombre:</label>
-                        <input type="text" id="nombre_encargado" name="nombre_encargado">
+                        <label for="nombreencargado">Nombre:</label>
+                        <input type="text" id="nombreencargado" name="nombreencargado">
                     </div>
                     <div class="col">
-                        <label for="telefono_encargado">Teléfono:</label>
-                        <input type="tel" id="telefono_encargado" name="telefono_encargado">
+                        <label for="telefonoencargado">Teléfono:</label>
+                        <input type="tel" id="telefonoencargado" name="telefonoencargado">
                     </div>
                     <div class="col">
-                        <label for="grado_encargado">Grado:</label>
-                        <input type="text" id="grado_encargado" name="grado_encargado">
+                        <label for="gradoencargado">Grado:</label>
+                        <input type="text" id="gradoencargado" name="gradoencargado">
                     </div>
                     <div class="col">
-                        <label for="firma_encargado">Firma:</label>
-                        <input type="text" id="firma_encargado" name="firma_encargado">
+                        <label for="firmaencargado">Firma:</label>
+                        <input type="text" id="firmaencargado" name="firmaencargado">
                     </div>
                 </div>
             </div>
@@ -218,20 +220,20 @@
                 <h4>Datos técnicos del Cliente</h4>
                 <div class="row">
                     <div class="col">
-                        <label for="nombre_cliente">Nombre:</label>
-                        <input type="text" id="nombre_cliente" name="nombre_cliente">
+                        <label for="nombrecliente">Nombre:</label>
+                        <input type="text" id="nombrecliente" name="nombrecliente">
                     </div>
                     <div class="col">
-                        <label for="telefono_cliente">Teléfono:</label>
-                        <input type="tel" id="telefono_cliente" name="telefono_cliente">
+                        <label for="telefonocliente">Teléfono:</label>
+                        <input type="tel" id="telefonocliente" name="telefonocliente">
                     </div>
                     <div class="col">
-                        <label for="grado_cliente">Grado:</label>
-                        <input type="text" id="grado_cliente" name="grado_cliente">
+                        <label for="gradocliente">Grado:</label>
+                        <input type="text" id="gradocliente" name="grado_liente">
                     </div>
                     <div class="col">
-                        <label for="firma_cliente">Firma:</label>
-                        <input type="text" id="firma_cliente" name="firma_cliente">
+                        <label for="firmacliente">Firma:</label>
+                        <input type="text" id="firmacliente" name="firmacliente">
                     </div>
                 </div>
             </div>
@@ -270,37 +272,35 @@
                         <input type="text" id="solucion" name="solucion">
                     </div>
                 </div>
+                
             </div>
 
-            <div class="button">
-                <div class="row">
-                    <div class="col">
-                        <button class="btn btn-primary btn-lg" id="btnCrear">Crear</button>
-                    </div>
-                </div>
-            </div>
+
         
-            <!-- Tabla -->
-            <div class="table-responsive">
-                <table class="table table-striped" id="activos">
-                    <thead>
-                        <tr>
-                            <th scope="col">Id</th>
-                            <th scope="col">Nombre</th>
-                            <th scope="col">Estado</th>
-                            <th scope="col">Criticidad</th>
-                            <th scope="col">Fabricante</th>
-                            <th scope="col">Modelo</th>
-                            <th scope="col">Instalación</th>
-                            <th scope="col">Acciones</th>
-                            <th scope="col"></th>
-                        </tr>
-                    </thead>
-                    <tbody>
-        
-                    </tbody>
-                </table>
-            </div>
+            <a onclick="registrarmantenimiento()" href="#" class="btn btn-primary btn-user btn-block">
+                Guardar
+            </a>
+            
+                
+            <table class="table table-striped" id="mantenimientotab">
+                <thead>
+                    <tr>
+                        <th scope="col">N° Mantenimiento</th>
+                        <th scope="col">Fecha recibido:</th>
+                        <th scope="col">Fecha de entrega:</th>
+                        <th scope="col">Tecnico encargado</th>
+                        <th scope="col">cliente</th>
+                        <th scope="col">Equipo</th>
+                        <th scope="col">Falla</th>
+                        <th scope="col">Acciones</th>
+
+                    </tr>
+                </thead>
+                <tbody>
+    
+                </tbody>
+            </table>
+            
             </div>
         </body>
         </div>
@@ -314,9 +314,8 @@
     <!-- Fin de la tarjeta grande -->
 
     <!-- <script src="js/instalacion/instalacion.js"></script> -->
-    <script src="js/Activos/mostrar.js"></script>
-    <script src="js/Activos/instalacion.js"></script>
-       <script src="js/inicio.js"></script>
+    <script src="js/mantenimiento/mostrar.js"></script>
+    <script src="js/mantenimiento/instalacion.js"></script>
 
 </body>
 
