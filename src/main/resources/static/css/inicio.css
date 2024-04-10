@@ -19,8 +19,7 @@ header {
     background: #27374D;
     display: flex;
     align-items: center;
-    position: fixed;
-    top: 0;
+  
     z-index: 200;
 }
 
@@ -30,7 +29,7 @@ header {
 }
 
 .show_title {
-    color: #DDE6ED;
+    color: #0f2739;
     display: none;
 }
 
@@ -100,7 +99,7 @@ a.selected {
 }
 
 .body_move {
-    margin-left: 250px;
+    margin-left: 210px;
 }
 
 .menu__side__move {
