@@ -35,24 +35,25 @@ document.addEventListener("DOMContentLoaded", function() {
     });
 });
 
+
 function irAReporteMantenimiento() {
     window.location.href = "reporteMantenimiento.html";
 }
 
 
-function mostrarImagen() {
-    var archivoSeleccionado = document.getElementById('imagen').files[0];
-    var visorImagen = document.getElementById('imagen-preview');
 
-    if (archivoSeleccionado) {
-        var reader = new FileReader();
-        reader.onload = function(e) {
-            visorImagen.src = e.target.result;
-        };
-        reader.readAsDataURL(archivoSeleccionado);
+    function mostrarImagenMa() {
+        var archivoSeleccionado = document.getElementById('imagen').files[0];
+        var visorImagen = document.querySelector('.icono-casa');
+
+        if (archivoSeleccionado) {
+            var reader = new FileReader();
+            reader.onload = function(e) {
+                visorImagen.innerHTML = '<img class="imagen-cubierta" src="' + e.target.result + '" />';
+            };
+            reader.readAsDataURL(archivoSeleccionado);
+        }
     }
-}
 
-document.getElementById('imagen').addEventListener('change', mostrarImagen);
-
+    document.getElementById('imagen').addEventListener('change', mostrarImagenMa);
 
