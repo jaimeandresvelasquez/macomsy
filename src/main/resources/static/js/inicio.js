@@ -34,14 +34,20 @@ document.addEventListener("DOMContentLoaded", function() {
         window.location.href = 'login.html';
     });
 });
+
+function irAReporteMantenimiento() {
+    window.location.href = "reporteMantenimiento.html";
+}
+
+
 function mostrarImagen() {
     var archivoSeleccionado = document.getElementById('imagen').files[0];
-    var visorImagen = document.querySelector('.icono-casa');
+    var visorImagen = document.getElementById('imagen-preview');
 
     if (archivoSeleccionado) {
         var reader = new FileReader();
         reader.onload = function(e) {
-            visorImagen.innerHTML = '<img class="imagen-cubierta" src="' + e.target.result + '" />';
+            visorImagen.src = e.target.result;
         };
         reader.readAsDataURL(archivoSeleccionado);
     }
@@ -49,6 +55,4 @@ function mostrarImagen() {
 
 document.getElementById('imagen').addEventListener('change', mostrarImagen);
 
-function irAReporteMantenimiento() {
-    window.location.href = "reporteMantenimiento.html";
-}
+
