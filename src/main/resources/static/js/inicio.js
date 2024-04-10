@@ -42,18 +42,19 @@ function irAReporteMantenimiento() {
 
 
 
-    function mostrarImagenMa() {
-        var archivoSeleccionado = document.getElementById('imagen').files[0];
-        var visorImagen = document.querySelector('.icono-casa');
+function mostrarImagenMa(input) {
+    var archivoSeleccionado = input.files[0];
+    var visorImagen = document.querySelector('.icono-casa');
 
-        if (archivoSeleccionado) {
-            var reader = new FileReader();
-            reader.onload = function(e) {
-                visorImagen.innerHTML = '<img class="imagen-cubierta" src="' + e.target.result + '" />';
-            };
-            reader.readAsDataURL(archivoSeleccionado);
-        }
+    if (archivoSeleccionado) {
+        var reader = new FileReader();
+        reader.onload = function(e) {
+            visorImagen.innerHTML = '<img class="imagen-cubierta" src="' + e.target.result + '" />';
+        };
+        reader.readAsDataURL(archivoSeleccionado);
     }
+}
 
-    document.getElementById('imagen').addEventListener('change', mostrarImagenMa);
-
+document.getElementById('imagen').addEventListener('change', function() {
+    mostrarImagenMa(this);
+});
