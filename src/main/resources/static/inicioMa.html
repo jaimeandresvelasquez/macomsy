@@ -62,10 +62,15 @@
         max-width: 18rem; /* Ancho máximo de la tarjeta */
 
       }
+
+      .col{
+            border: solid rgb(170, 170, 170);
+            text-align:center;
+        }
     </style>
   </head>
 
-  <body id="body">
+  <body  id="body">
     <header>
       <span id="title_header" class="show_title">
         <h1>MACOMSY</h1>
@@ -145,14 +150,54 @@
     </div>
 
     Fin de las tarjetas -->
-<div class="tar">
-  <div id="tarjetaorden">
-  </div>
-</div>
+    <div class="tar">
+      <div class="container">
+        <div class="row">
+            <div class="col">
+              <h2>ORDENES DE TRABAJO</h2>
+            </div>
+          </div>
+        <div class="row">
+          <div class="col">
+            <h4>CRITICO</h4>
+          </div>
+          <div class="col">
+            <H4>ALTO</H4>
+          </div>
+          <div class="col">
+            <H4>MEDIO</H4>
+          </div>
+          <div class="col">
+            <H4>BAJO</H4>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col">
+            <div id="tarjetaordencri">
+            </div>
+          </div>
+          <div class="col">
+            <div id="tarjetaordenalt">
+            </div>
+          </div>
+          <div class="col">
+            <div id="tarjetaordenmed">
+            </div>
+          </div>
+          <div class="col">
+            <div id="tarjetaordenbaj">
+            </div>
+          </div>
+        </div>
+    </div>
+    </div>
 
 
 
     <script src="js/inicio.js"></script>
-    <script src="js/informes/informe.js"></script>
+    <script src="js/informes/critico.js"></script>
+    <script src="js/informes/alto.js"></script>
+    <script src="js/informes/medio.js"></script>
+    <script src="js/informes/bajo.js"></script>
   </body>
 </html>

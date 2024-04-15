@@ -7,16 +7,69 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <title>Document</title>
 
+    <style>
+
+        .col{
+            border: solid black;
+            text-align: center;
+        }
+
+
+
+
+    </style>
+
 </head>
 <body>
 
 
-<div style="max-width: 18rem;" id="tarjetaorden">
+    <div class="container">
+        <div class="row">
+            <div class="col">
+              <h2>ORDENES DE TRABAJO</h2>
+            </div>
+          </div>
+        <div class="row">
+          <div class="col">
+            <h4>CRITICO</h4>
+          </div>
+          <div class="col">
+            <H4>ALTO</H4>
+          </div>
+          <div class="col">
+            <H4>MEDIO</H4>
+          </div>
+          <div class="col">
+            <H4>BAJO</H4>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col">
+            <div id="tarjetaordencri">
+            </div>
+          </div>
+          <div class="col">
+            <div id="tarjetaordenalt">
+            </div>
+          </div>
+          <div class="col">
+            <div id="tarjetaordenmed">
+            </div>
+          </div>
+          <div class="col">
+            <div id="tarjetaordenbaj">
+            </div>
+          </div>
+        </div>
+    </div>
 
-</div>
 
-    <!-- Agrega aquí tus scripts de JavaScript -->
-    <script src="js/informes/informe.js"></script>
+
+<!-- Agrega aquí tus scripts de JavaScript -->
+<script src="js/informes/critico.js"></script>
+<script src="js/informes/alto.js"></script>
+<script src="js/informes/medio.js"></script>
+<script src="js/informes/bajo.js"></script>
   
 </body>
 </html>

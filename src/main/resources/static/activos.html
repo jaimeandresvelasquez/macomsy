@@ -98,7 +98,7 @@
     </script>
 </head>
 
-<body class="bg-gradient-primary-login">
+<body class="bg-gradient-primary-login" id="body">
 
     <header>
         <span id="title_header" class="show_title">
@@ -204,11 +204,11 @@
                             <form class="user">
                                 <div class="form-group row">
                                     <div class="col-sm-6 mb-3 mb-sm-0">
-                                        <input type="text" class="form-control form-control-user" id="nombre"
+                                        <input type="text" class="form-control" id="nombre"
                                             placeholder="Nombre">
                                     </div>
                                     <div class="col-sm-6">
-                                        <select id="estado" name="estado"class="form-control form-control-user">
+                                        <select id="estado" name="estado"class="form-control">
                                             <option value="Operativo">Operativo</option>
                                             <option value="En mantenimiento">En mantenimiento</option>
                                             <option value="Fuera de servicio">Fuera de servicio</option>
@@ -219,7 +219,7 @@
                                 <div class="form-group row">
                     
                                     <div class="col-sm-6 mb-3 mb-sm-0">
-                                        <select id="criticidad" name="criticidad" class="form-control form-control-user">
+                                        <select id="criticidad" name="criticidad" class="form-control">
                                             <option value="critico">Crítico</option>
                                             <option value="alto">Alto</option>
                                             <option value="medio">Medio</option>
@@ -227,20 +227,20 @@
                                         </select>
                                     </div>
                                     <div class="col-sm-6">
-                                        <input type="text" class="form-control form-control-user" id="fabricante"
+                                        <input type="text" class="form-control" id="fabricante"
                                             placeholder="fabricante">
                                     </div>
                     
                                 </div>
                                 <div class="form-group row">
                                     <div class="col-sm-12 mb-3 mb-sm-0">
-                                        <input type="text" class="form-control form-control-user"
+                                        <input type="text" class="form-control"
                                             id="modelo" placeholder="Modelo">
                                     </div>
                                 </div>
                                 <div class="form-group row">
                                     <div class="col-sm-12 mb-3 mb-sm-0">
-                                        <select id="instalaciones" name="instalaciones" class="form-control form-control-user">
+                                        <select id="instalaciones" name="instalaciones" class="form-control">
                                             <option value="Residencial">Residencial</option>
                                             <option value="Comercial">Comercial</option>
                                             <option value="Industrial">Industrial</option>
