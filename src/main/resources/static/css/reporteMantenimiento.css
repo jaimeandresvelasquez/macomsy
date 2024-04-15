@@ -327,3 +327,12 @@ textarea {
     width: calc(100% - 10px); /* Calcula el ancho para que los input estén juntos */
     margin-right: 10px; /* Ajusta el espacio entre los input */
 }
+.notification-icon {
+    position: absolute;
+    top: 12px;
+    right: 70px; /* Ajusta la posición horizontal del ícono de notificación */
+    color: #DDE6ED;
+    cursor: pointer;
+    font-size: 26px; /* Tamaño del ícono de notificación */
+    right: 150px;
+}

@@ -233,3 +233,13 @@ a.selected {
 .profile-options li a:hover {
     color: #dc3545; /* Cambia el color al pasar el ratón por encima */
 }
+       /* Estilo para el ícono de notificación */
+       .notification-icon {
+        position: absolute;
+        top: 12px;
+        right: 70px; /* Ajusta la posición horizontal del ícono de notificación */
+        color: #DDE6ED;
+        cursor: pointer;
+        font-size: 26px; /* Tamaño del ícono de notificación */
+        right: 150px;
+    }
