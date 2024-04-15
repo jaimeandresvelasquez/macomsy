@@ -264,3 +264,6 @@ textarea {
     font-size: 28px; /* Cambia el tamaño del título h1 a 28px */
 }
 
+.form-control-user {
+    color: black;
+}   
