@@ -17,7 +17,26 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     
+    <style>
 
+
+        #body .btn-primary {
+            background-color: #526D82; /* Color de fondo del botón */
+            border-color: #526D82; /* Color del borde del botón */
+        }
+
+        #body .btn-primary:hover {
+            background-color: #9DB2BF; /* Color de fondo del botón al pasar el mouse */
+            border-color: #9DB2BF; /* Color del borde del botón al pasar el mouse */
+        }
+
+        #body .form-control {
+            background-color: #ffff; /* Color de fondo del campo de entrada */
+            color: #27374D; /* Color de texto del campo de entrada */
+        }
+
+
+    </style>
 
 </head>
 
@@ -274,11 +293,12 @@
                         <label for="solucion">Solución:</label>
                         <input type="text" id="solucion" name="solucion">
                     </div>
+                    <a onclick="registrarmantenimiento()" href="#" class="btn btn-primary btn-user btn-block">
+                        Guardar
+                    </a>
+     
                 </div>
-                <a onclick="registrarmantenimiento()" href="#" class="btn btn-primary btn-user btn-block">
-                    Guardar
-                </a>
-                
+
                     
                 <table class="table table-striped" id="mantenimientotab">
                     <thead>
