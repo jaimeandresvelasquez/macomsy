@@ -20,11 +20,6 @@ async function instaCri() {
 
     let optionsHtml = '';
 
-
-
-
-
-
     for (let activo of activosInvertidos) {
 
         if (activo.prioridad == "Critico"){
@@ -40,19 +35,6 @@ async function instaCri() {
             '</div>';
         }
 
-        //'<div className="tarjetas__container" style="margin-top: 100px;">'+
-        //'<div className="tarjeta">' +
-        //'<div class="titulo">' +
-        //'<h3 class="numero-caso">[CASO: ' + activo.idordentrabajo + ']</h3>' +
-        //'</div>' +
-        //'<div class="contenido">' +
-        //'<i class="fa-solid fa-wrench icono" title="Ordenes"></i>' +
-        //'<p class="texto">' + activo.descripcion + '</p>' +
-        //'<p class="urgencia urgencia-alta">' + activo.prioridad + '</p>' +
-        //'</div>' +
-        //'</div>'+
-        //'</div>'
-        //;
     }
 
     document.getElementById('tarjetaordencri').innerHTML = optionsHtml;

@@ -25,12 +25,14 @@ async function instaBaj() {
         if (activo.prioridad == "Bajo"){
             optionsHtml +=
             '<div class="card text-white bg-success mb-3">'+
-                '<div class="card-header">' + activo.prioridad + '</div>' +
+                '<div class="card-header">' + activo.equipo + '</div>' +
                 '<div class="card-body">' +
                     '<h5 class="card-title">[CASO: ' + activo.idordentrabajo + ']</h5>' +
+                    '<h5 class="card-title">Usuario: ' + activo.requerido + '</h5>' +
                     '<p class="card-text">' + activo.descripcion + '</p>' +
+                    '<p class="card-text">' + activo.fecha + '</p>' +
                 '</div>'+
-            '</div>';
+        '</div>';
         }
 
         //'<div className="tarjetas__container" style="margin-top: 100px;">'+
